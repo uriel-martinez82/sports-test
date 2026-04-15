@@ -6,7 +6,7 @@ import { Menu, X, ChevronDown, Phone } from "lucide-react";
 
 const cotizaItems = [
   { label: "Estudios Indoor Cycling",   href: "/cotiza/indoor-cycling" },
-  { label: "Condominios",               href: "#contacto" },
+  { label: "Condominios",               href: "/cotiza/condominios" },
   { label: "Desarrollos Inmobiliarios", href: "#contacto" },
   { label: "Clubes",                    href: "#contacto" },
   { label: "Empresas",                  href: "#contacto" },
