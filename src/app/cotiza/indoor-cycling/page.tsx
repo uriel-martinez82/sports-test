@@ -20,17 +20,17 @@ const bullets = [
 const models = [
   {
     name: "Stages SC2",
-    tag: "Entrada",
+    tag: "Rhythm & Boutique",
     description:
-      "Manubrio RythmBar ideal para bike dance y coreografía. Sin potenciómetro de serie (disponible como upgrade). La opción más accesible para abrir con calidad de estudio boutique.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+      "Designed for the world's most popular rhythm classes. The RhythmBar™ accommodates all rhythm hand positions, SprintShift enables instant resistance changes, and CarbonGlyde delivers the smoothest ride available for boutique studios.",
+    image: "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/SC_Indoor_Series_Sc2_820_by_615.jpg",
   },
   {
     name: "Stages SC3",
     tag: "Más completo",
     description:
-      "Incluye potenciómetro Stages Power de serie, consola autogenerada y ajuste de resistencia de precisión. El modelo elegido por los estudios más exigentes del país.",
-    image: "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80",
+      "The global leader in premium indoor cycling. Features CarbonGlyde, magnetic braking, FitLoc, SprintShift, and the Stages Power meter — the most accurate direct power meter on the market, used by elite pro cycling teams worldwide.",
+    image: "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/Stages_Sc_Series_SC3_820_by_615.jpg",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function IndoorCyclingPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=1920&q=80"
+          src="https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/stages_eqx_scbikes_700x450.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -150,17 +150,39 @@ export default function IndoorCyclingPage() {
             {/* Texto */}
             <div>
               <AnimateIn>
+                {/* Logo Stages */}
+                <div className="mb-6">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg"
+                    alt="Stages Cycling"
+                    className="h-7 w-auto"
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
+                </div>
+
                 <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                   Por qué Stages
                 </p>
                 <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
                   La bicicleta que usan los mejores estudios
                 </h2>
-                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
+                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-8 max-w-md">
                   Sport Solutions es distribuidor exclusivo de Stages Cycling en México.
                   La serie SC es la bicicleta elegida por estudios líderes como Síclo y SoulCycle,
                   diseñada para resistir las clases más demandantes con mínimo mantenimiento.
                 </p>
+
+                {/* Cita Equinox */}
+                <blockquote className="border-l-2 border-[#CC1C1C] pl-5 mb-10 max-w-md">
+                  <p className="text-white/75 text-sm lg:text-base italic leading-relaxed mb-2">
+                    &ldquo;We&apos;ve partnered exclusively with Stages to bring the most technologically
+                    advanced group indoor cycles to our clubs.&rdquo;
+                  </p>
+                  <cite className="text-white/35 text-xs font-semibold uppercase tracking-widest not-italic">
+                    — Equinox
+                  </cite>
+                </blockquote>
               </AnimateIn>
 
               <AnimateIn delay={0.1}>
@@ -191,8 +213,8 @@ export default function IndoorCyclingPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=1200&q=80"
-                  alt="Estudio de Indoor Cycling con bicicletas Stages"
+                  src="https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/SC_Indoor_Series_Range_820_by_615.jpg"
+                  alt="Gama completa de bicicletas Stages SC Series"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -234,10 +256,21 @@ export default function IndoorCyclingPage() {
                       alt={m.name}
                       className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     />
+                    {/* Tag */}
                     <div className="absolute top-4 left-4">
                       <span className="bg-[#CC1C1C] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">
                         {m.tag}
                       </span>
+                    </div>
+                    {/* Logo badge */}
+                    <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm px-3 py-2">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg"
+                        alt="Stages Cycling"
+                        className="h-4 w-auto"
+                        style={{ filter: "brightness(0) invert(1)" }}
+                      />
                     </div>
                   </div>
 
