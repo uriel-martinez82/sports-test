@@ -8,7 +8,7 @@ import ContactCTA from "@/components/sections/ContactCTA";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const FALLBACK_IMG = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
+const FALLBACK_IMG = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -68,6 +68,30 @@ const solutions: Solution[] = [
     image: "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Cotiza-tu-proyecto.jpg",
     cta: "Cotizar arrendamiento",
     accent: true,
+  },
+];
+
+const products = [
+  {
+    name: "Caminadora Unofit X8400",
+    description:
+      "Uso profesional, estructura robusta para alto tráfico. Garantía 7 años en estructura, 3 en motor.",
+    price: "Desde $3,999 MXN/mes",
+    image: "https://sportsolutions.com.mx/wp-content/uploads/2020/12/caminadora-x8400-unofit-g1-e1616518527384.jpg",
+  },
+  {
+    name: "Equipo Multigym",
+    description:
+      "Equipo de peso integrado de uso rudo, ideal para espacios reducidos con alta demanda.",
+    price: "Desde $2,999 MXN/mes",
+    image: "https://sportsolutions.com.mx/wp-content/uploads/2021/03/IF2060-Chica.png",
+  },
+  {
+    name: "Bicicleta Indoor Unofit Pro+",
+    description:
+      "Construida para clases de spinning y uso intensivo diario. Ideal para sala de bicicletas.",
+    price: "Desde $2,399 MXN/mes (x3 unidades)",
+    image: "https://sportsolutions.com.mx/wp-content/uploads/2021/03/bicicleta-para-indoor-cycling-bs001-unofit-m1.jpg",
   },
 ];
 
@@ -171,7 +195,7 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 2. FORMULARIO (ContactCTA) ───────────────────────────────────── */}
+      {/* ── 2. FORMULARIO ────────────────────────────────────────────────── */}
       <ContactCTA
         title="Cotiza el gimnasio de tu condominio"
         subtitle="Muy pronto un asesor comercial se pondrá en contacto contigo."
@@ -182,7 +206,6 @@ export default function CondominiosPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
-            {/* Texto */}
             <div>
               <AnimateIn>
                 <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
@@ -222,7 +245,6 @@ export default function CondominiosPage() {
               </AnimateIn>
             </div>
 
-            {/* Imagen */}
             <AnimateIn direction="left" delay={0.1} className="relative">
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -264,7 +286,6 @@ export default function CondominiosPage() {
               <AnimateIn key={s.title} delay={i * 0.1} direction="none">
                 <div className={`flex flex-col h-full ${s.accent ? "bg-black text-white" : "bg-white text-black"}`}>
 
-                  {/* Imagen arrendamiento */}
                   {s.image && (
                     <div className="relative overflow-hidden" style={{ aspectRatio: "16/7" }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -291,7 +312,6 @@ export default function CondominiosPage() {
                       {s.description}
                     </p>
 
-                    {/* Tabla de precios (solo arrendamiento) */}
                     {s.pricing && (
                       <div className="mb-8 border border-white/10 divide-y divide-white/8">
                         {s.pricing.map((row) => (
@@ -303,7 +323,6 @@ export default function CondominiosPage() {
                       </div>
                     )}
 
-                    {/* Perks */}
                     <ul className="flex flex-col gap-3 mb-6">
                       {s.perks.map((perk) => (
                         <li key={perk} className="flex items-start gap-3">
@@ -315,7 +334,6 @@ export default function CondominiosPage() {
                       ))}
                     </ul>
 
-                    {/* Términos */}
                     {s.terms && (
                       <p className="text-white/30 text-xs mb-8 leading-relaxed border-l border-white/15 pl-3">
                         {s.terms}
@@ -337,7 +355,69 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 5. STATS ─────────────────────────────────────────────────────── */}
+      {/* ── 5. EQUIPOS PARA TU CONDOMINIO ────────────────────────────────── */}
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          <AnimateIn className="mb-14">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+              Catálogo
+            </p>
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
+              Equipos ideales para condominios
+            </h2>
+          </AnimateIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-gray-100">
+            {products.map((p, i) => (
+              <AnimateIn key={p.name} delay={i * 0.1} direction="none">
+                <div className="bg-white group flex flex-col h-full">
+
+                  {/* Imagen */}
+                  <div className="relative overflow-hidden bg-gray-50" style={{ aspectRatio: "4/3" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      className="w-full h-full object-contain object-center p-6 transition-transform duration-700 group-hover:scale-105"
+                      onError={(e) => { e.currentTarget.src = FALLBACK_IMG; }}
+                    />
+                    {/* Badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-[#CC1C1C] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">
+                        Arrendamiento disponible
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Contenido */}
+                  <div className="flex flex-col flex-1 p-8 lg:p-10">
+                    <h3 className="text-xl lg:text-2xl font-black text-black tracking-tight mb-3">
+                      {p.name}
+                    </h3>
+                    <p className="text-black/55 text-sm font-light leading-relaxed mb-6 flex-1">
+                      {p.description}
+                    </p>
+
+                    <div className="flex items-center justify-between pt-5 border-t border-gray-100">
+                      <span className="text-[#CC1C1C] font-black text-base">{p.price}</span>
+                      <Link
+                        href="#contacto"
+                        className="inline-flex items-center gap-1.5 text-black/50 text-xs font-semibold uppercase tracking-widest hover:text-black hover:gap-2.5 transition-all duration-200 group/link"
+                      >
+                        Cotizar
+                        <ArrowRight size={12} className="transition-transform duration-200 group-hover/link:translate-x-0.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. STATS ─────────────────────────────────────────────────────── */}
       <section className="bg-[#111111] py-28 lg:py-36 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8 border border-white/8">
@@ -357,7 +437,7 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 6. EL PROCESO ────────────────────────────────────────────────── */}
+      {/* ── 7. EL PROCESO ────────────────────────────────────────────────── */}
       <section className="bg-black py-28 lg:py-36 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -399,9 +479,6 @@ export default function CondominiosPage() {
           </div>
         </div>
       </section>
-
-      {/* ── 7. CTA FINAL ─────────────────────────────────────────────────── */}
-      <ContactCTA title="¿Listo para modernizar el gimnasio de tu condominio?" />
     </>
   );
 }
