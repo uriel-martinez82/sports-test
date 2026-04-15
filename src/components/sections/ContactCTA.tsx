@@ -36,7 +36,7 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="contacto" className="relative bg-black py-24 lg:py-32 overflow-hidden">
+    <section id="contacto" className="relative bg-black py-32 lg:py-44 overflow-hidden">
       {/* Background image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -80,7 +80,7 @@ export default function ContactCTA() {
 
           {/* Right: form */}
           <AnimateIn direction="left" delay={0.15}>
-            <div className="bg-white/5 border border-white/10 p-8 lg:p-10">
+            <div className="bg-white/5 border border-white/10 p-10 lg:p-14">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
                   <div className="w-12 h-12 bg-[#CC1C1C] flex items-center justify-center mb-2">
@@ -108,7 +108,7 @@ export default function ContactCTA() {
                       required
                       value={form.project}
                       onChange={set("project")}
-                      className="bg-white/5 border border-white/10 px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition-colors appearance-none"
+                      className="bg-white/5 border border-white/20 px-5 py-4 text-white text-sm focus:outline-none focus:border-white/40 transition-colors appearance-none"
                     >
                       <option value="" disabled className="bg-black text-white/40">Selecciona una opción</option>
                       {projectTypes.map((t) => (
@@ -126,13 +126,13 @@ export default function ContactCTA() {
                       value={form.message}
                       onChange={set("message")}
                       placeholder="Tamaño del espacio, número de equipos, fecha estimada..."
-                      className="bg-white/5 border border-white/10 px-4 py-3 text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-white/30 transition-colors resize-none"
+                      className="bg-white/5 border border-white/20 px-5 py-4 text-white text-sm placeholder:text-white/25 focus:outline-none focus:border-white/40 transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="mt-1 w-full bg-[#CC1C1C] text-white font-bold text-sm py-4 hover:bg-[#b51818] transition-colors duration-200 tracking-wide uppercase"
+                    className="mt-2 w-full bg-[#CC1C1C] text-white font-black text-base py-5 hover:bg-[#b51818] transition-colors duration-200 tracking-widest uppercase"
                   >
                     Solicitar cotización
                   </button>
@@ -172,7 +172,7 @@ function Field({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="bg-white/5 border border-white/10 px-4 py-3 text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-white/30 transition-colors"
+        className="bg-white/5 border border-white/20 px-5 py-4 text-white text-sm placeholder:text-white/25 focus:outline-none focus:border-white/40 transition-colors"
       />
     </div>
   );

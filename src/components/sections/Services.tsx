@@ -31,7 +31,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-[#0a0a0a] py-24 lg:py-32 border-t border-white/5">
+    <section id="servicios" className="bg-[#0d0d0d] py-28 lg:py-36 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
@@ -39,7 +39,7 @@ export default function Services() {
           <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
             Servicios
           </p>
-          <h2 className="text-3xl lg:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-4xl lg:text-6xl font-black text-white tracking-tight">
             Más que equipamiento
           </h2>
         </AnimateIn>
@@ -54,7 +54,7 @@ export default function Services() {
                 delay={i * 0.1}
                 className="bg-[#0a0a0a] hover:bg-white/[0.03] transition-colors duration-300"
               >
-                <div className="p-10 flex flex-col h-full gap-6">
+                <div className="p-12 flex flex-col h-full gap-7">
                   <div className="w-11 h-11 bg-[#CC1C1C]/10 border border-[#CC1C1C]/20 flex items-center justify-center">
                     <Icon size={18} className="text-[#CC1C1C]" />
                   </div>

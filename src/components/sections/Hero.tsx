@@ -8,7 +8,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[680px] flex items-end overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Background image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -19,16 +19,16 @@ export default function Hero() {
       />
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-black/65" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-20 lg:pb-28">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-24">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.15 }}
-          className="text-white/55 text-xs font-semibold uppercase tracking-[0.22em] mb-5"
+          className="text-white/65 text-xs font-semibold uppercase tracking-[0.22em] mb-6"
         >
           Equipamiento Profesional · México
         </motion.p>
@@ -37,7 +37,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.25 }}
-          className="text-[clamp(2.8rem,8vw,6rem)] font-black text-white leading-[0.88] tracking-tight mb-6 max-w-4xl"
+          className="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tight mb-8 max-w-4xl"
         >
           Equipamos el gimnasio perfecto
         </motion.h1>
@@ -46,7 +46,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease, delay: 0.4 }}
-          className="text-white/55 text-lg lg:text-xl font-light max-w-lg mb-10 leading-relaxed"
+          className="text-white/70 text-lg lg:text-xl font-light max-w-lg mb-10 leading-relaxed"
         >
           Distribuidores exclusivos de las mejores marcas fitness del mundo
         </motion.p>
@@ -59,13 +59,13 @@ export default function Hero() {
         >
           <Link
             href="#contacto"
-            className="inline-flex items-center justify-center bg-white text-black font-bold text-sm px-9 py-4 hover:bg-white/90 transition-colors duration-200 tracking-wide"
+            className="inline-flex items-center justify-center bg-white text-black font-bold text-base px-10 py-5 hover:bg-white/90 transition-colors duration-200 tracking-wide"
           >
             Cotiza tu proyecto
           </Link>
           <Link
             href="#equipos"
-            className="inline-flex items-center justify-center border border-white/80 text-white font-medium text-sm px-9 py-4 hover:bg-white/10 transition-colors duration-200 tracking-wide"
+            className="inline-flex items-center justify-center border border-white/80 text-white font-medium text-base px-10 py-5 hover:bg-white/10 transition-colors duration-200 tracking-wide"
           >
             Ver equipos
           </Link>

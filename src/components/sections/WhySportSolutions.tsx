@@ -21,7 +21,7 @@ export default function WhySportSolutions() {
               <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                 Por qué elegirnos
               </p>
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+              <h2 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-tight tracking-tight mb-6">
                 No solo vendemos equipos. Entregamos proyectos listos.
               </h2>
               <p className="text-white/50 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
@@ -46,7 +46,7 @@ export default function WhySportSolutions() {
             <AnimateIn delay={0.2}>
               <Link
                 href="#contacto"
-                className="inline-flex items-center border border-white/70 text-white font-semibold text-sm px-8 py-3.5 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
+                className="inline-flex items-center border border-white/70 text-white font-semibold text-base px-10 py-4 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
               >
                 Habla con un especialista
               </Link>

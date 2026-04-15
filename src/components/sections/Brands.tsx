@@ -11,7 +11,7 @@ const brands = [
 
 export default function Brands() {
   return (
-    <section id="marcas" className="bg-[#111111] py-24 lg:py-28 overflow-hidden">
+    <section id="marcas" className="bg-[#111111] py-28 lg:py-36 overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
@@ -20,7 +20,7 @@ export default function Brands() {
             <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Marcas
             </p>
-            <h2 className="text-3xl lg:text-5xl font-black text-white tracking-tight">
+            <h2 className="text-4xl lg:text-6xl font-black text-white tracking-tight">
               Marcas que distribuimos
             </h2>
           </div>
@@ -45,14 +45,14 @@ export default function Brands() {
           {[...brands, ...brands].map((brand, i) => (
             <div
               key={i}
-              className="flex items-center gap-10 px-14 py-6 border-r border-white/8 group cursor-default"
+              className="flex items-center gap-12 px-16 py-10 border-r border-white/8 group cursor-default"
             >
               {/* Logo placeholder */}
-              <div className="flex flex-col items-center gap-1.5">
-                <span className="text-white/90 font-black text-2xl tracking-tight group-hover:text-[#CC1C1C] transition-colors duration-300">
+              <div className="flex flex-col items-center gap-2">
+                <span className="text-white/90 font-black text-4xl tracking-tight group-hover:text-[#CC1C1C] transition-colors duration-300">
                   {brand.name}
                 </span>
-                <span className="text-white/25 text-[10px] uppercase tracking-[0.18em] font-medium">
+                <span className="text-white/30 text-xs uppercase tracking-[0.18em] font-medium">
                   {brand.category}
                 </span>
               </div>
