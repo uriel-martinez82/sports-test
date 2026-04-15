@@ -21,7 +21,7 @@ type FormState = {
   message: string;
 };
 
-export default function ContactCTA() {
+export default function ContactCTA({ title = "¿Listo para equipar tu espacio?" }: { title?: string }) {
   const [form, setForm] = useState<FormState>({
     name: "", email: "", phone: "", project: "", message: "",
   });
@@ -57,7 +57,7 @@ export default function ContactCTA() {
                 Contacto
               </p>
               <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-5">
-                ¿Listo para equipar tu espacio?
+                {title}
               </h2>
               <p className="text-white/50 text-base font-light leading-relaxed max-w-sm mb-10">
                 Cuéntanos sobre tu proyecto y un especialista te contactará en
