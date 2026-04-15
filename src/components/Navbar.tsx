@@ -10,7 +10,7 @@ const cotizaItems = [
   { label: "Desarrollos Inmobiliarios", href: "/cotiza/desarrollos-inmobiliarios" },
   { label: "Clubes",                    href: "/cotiza/clubes" },
   { label: "Empresas",                  href: "/cotiza/empresas" },
-  { label: "Universidades",             href: "#contacto" },
+  { label: "Universidades",             href: "/cotiza/universidades" },
 ];
 
 const navLinks = [
