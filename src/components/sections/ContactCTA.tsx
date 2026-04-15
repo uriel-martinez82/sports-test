@@ -21,7 +21,13 @@ type FormState = {
   message: string;
 };
 
-export default function ContactCTA({ title = "¿Listo para equipar tu espacio?" }: { title?: string }) {
+export default function ContactCTA({
+  title = "¿Listo para equipar tu espacio?",
+  subtitle = "Cuéntanos sobre tu proyecto y un especialista te contactará en menos de 24 horas hábiles con una propuesta personalizada.",
+}: {
+  title?: string;
+  subtitle?: string;
+}) {
   const [form, setForm] = useState<FormState>({
     name: "", email: "", phone: "", project: "", message: "",
   });
@@ -60,8 +66,7 @@ export default function ContactCTA({ title = "¿Listo para equipar tu espacio?" 
                 {title}
               </h2>
               <p className="text-white/50 text-base font-light leading-relaxed max-w-sm mb-10">
-                Cuéntanos sobre tu proyecto y un especialista te contactará en
-                menos de 24 horas hábiles con una propuesta personalizada.
+                {subtitle}
               </p>
             </AnimateIn>
 

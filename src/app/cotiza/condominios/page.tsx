@@ -8,6 +8,8 @@ import ContactCTA from "@/components/sections/ContactCTA";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const FALLBACK_IMG = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
+
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const bullets = [
@@ -17,7 +19,21 @@ const bullets = [
   "Los residentes ahorran hasta 35% vs membresía externa",
 ];
 
-const solutions = [
+type PricingRow = { item: string; price: string };
+
+type Solution = {
+  tag: string;
+  title: string;
+  description: string;
+  perks: string[];
+  cta: string;
+  accent: boolean;
+  image?: string;
+  pricing?: PricingRow[];
+  terms?: string;
+};
+
+const solutions: Solution[] = [
   {
     tag: "Opción A",
     title: "Compra Directa",
@@ -35,13 +51,21 @@ const solutions = [
     tag: "Opción B",
     title: "Arrendamiento Flexible",
     description:
-      "Sin descapitalizarte. Contrato hasta 3 años directo con la AC del condominio, sin instituciones financieras. Desde $5,000 MXN/mes con caminadora + elíptica + bici + multigym.",
+      "Sin descapitalizarte. Contrato directo con la AC del condominio, sin instituciones financieras.",
     perks: [
-      "Enganche bajo",
-      "Pagos deducibles",
-      "Mantenimiento incluido",
-      "Opción de compra al final",
+      "Enganche bajo — pago inicial del 20%",
+      "Pagos deducibles de impuestos",
+      "3 mantenimientos preventivos anuales incluidos",
+      "Opción de compra al 25% del valor al final",
     ],
+    pricing: [
+      { item: "2 Caminadoras profesionales", price: "desde $3,999/mes" },
+      { item: "1 Multigym de uso rudo",      price: "desde $2,999/mes" },
+      { item: "3 Bicicletas profesionales",  price: "desde $2,399/mes" },
+      { item: "Paquete básico completo",     price: "desde $5,000/mes" },
+    ],
+    terms: "Contrato a 36 meses · 3 mantenimientos preventivos anuales incluidos",
+    image: "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Cotiza-tu-proyecto.jpg",
     cta: "Cotizar arrendamiento",
     accent: true,
   },
@@ -94,10 +118,11 @@ export default function CondominiosPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80"
+          src="https://sportsolutions.com.mx/wp-content/uploads/2022/08/Condominios-y-torres-de-departamentos-Sport-Solutions.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          onError={(e) => { e.currentTarget.src = FALLBACK_IMG; }}
         />
         <div className="absolute inset-0 bg-black/65" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
@@ -146,7 +171,13 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 2. POR QUÉ UN GIMNASIO ───────────────────────────────────────── */}
+      {/* ── 2. FORMULARIO (ContactCTA) ───────────────────────────────────── */}
+      <ContactCTA
+        title="Cotiza el gimnasio de tu condominio"
+        subtitle="Muy pronto un asesor comercial se pondrá en contacto contigo."
+      />
+
+      {/* ── 3. POR QUÉ UN GIMNASIO ───────────────────────────────────────── */}
       <section className="bg-black py-28 lg:py-36 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
@@ -196,9 +227,10 @@ export default function CondominiosPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80"
+                  src="https://sportsolutions.com.mx/wp-content/uploads/2022/08/Arrendamiento-Sport.jpg"
                   alt="Gimnasio en condominio equipado por Sport Solutions"
                   className="w-full h-full object-cover object-center"
+                  onError={(e) => { e.currentTarget.src = FALLBACK_IMG; }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
@@ -214,7 +246,7 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 3. NUESTRAS SOLUCIONES ───────────────────────────────────────── */}
+      {/* ── 4. NUESTRAS SOLUCIONES ───────────────────────────────────────── */}
       <section className="bg-white py-28 lg:py-36">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -230,37 +262,74 @@ export default function CondominiosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 bg-gray-100">
             {solutions.map((s, i) => (
               <AnimateIn key={s.title} delay={i * 0.1} direction="none">
-                <div className={`flex flex-col h-full p-10 lg:p-14 ${s.accent ? "bg-black text-white" : "bg-white text-black"}`}>
-                  <span className={`text-[10px] font-bold uppercase tracking-widest mb-6 ${s.accent ? "text-[#CC1C1C]" : "text-black/40"}`}>
-                    {s.tag}
-                  </span>
+                <div className={`flex flex-col h-full ${s.accent ? "bg-black text-white" : "bg-white text-black"}`}>
 
-                  <h3 className={`text-3xl lg:text-4xl font-black tracking-tight mb-5 ${s.accent ? "text-white" : "text-black"}`}>
-                    {s.title}
-                  </h3>
+                  {/* Imagen arrendamiento */}
+                  {s.image && (
+                    <div className="relative overflow-hidden" style={{ aspectRatio: "16/7" }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={s.image}
+                        alt={s.title}
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => { e.currentTarget.src = FALLBACK_IMG; }}
+                      />
+                      <div className="absolute inset-0 bg-black/40" />
+                    </div>
+                  )}
 
-                  <p className={`text-base font-light leading-relaxed mb-8 flex-1 ${s.accent ? "text-white/55" : "text-black/55"}`}>
-                    {s.description}
-                  </p>
+                  <div className="flex flex-col flex-1 p-10 lg:p-14">
+                    <span className={`text-[10px] font-bold uppercase tracking-widest mb-6 ${s.accent ? "text-[#CC1C1C]" : "text-black/40"}`}>
+                      {s.tag}
+                    </span>
 
-                  <ul className="flex flex-col gap-3 mb-10">
-                    {s.perks.map((perk) => (
-                      <li key={perk} className="flex items-center gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
-                          <Check size={11} strokeWidth={3} className="text-white" />
-                        </span>
-                        <span className={`text-sm ${s.accent ? "text-white/70" : "text-black/65"}`}>{perk}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <h3 className={`text-3xl lg:text-4xl font-black tracking-tight mb-5 ${s.accent ? "text-white" : "text-black"}`}>
+                      {s.title}
+                    </h3>
 
-                  <Link
-                    href="#contacto"
-                    className={`inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all duration-200 group ${s.accent ? "text-white/60 hover:text-white" : "text-black/60 hover:text-black"}`}
-                  >
-                    {s.cta}
-                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </Link>
+                    <p className={`text-base font-light leading-relaxed mb-8 ${s.accent ? "text-white/55" : "text-black/55"}`}>
+                      {s.description}
+                    </p>
+
+                    {/* Tabla de precios (solo arrendamiento) */}
+                    {s.pricing && (
+                      <div className="mb-8 border border-white/10 divide-y divide-white/8">
+                        {s.pricing.map((row) => (
+                          <div key={row.item} className="flex items-center justify-between px-5 py-3.5">
+                            <span className="text-white/60 text-sm">{row.item}</span>
+                            <span className="text-white font-bold text-sm whitespace-nowrap ml-4">{row.price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Perks */}
+                    <ul className="flex flex-col gap-3 mb-6">
+                      {s.perks.map((perk) => (
+                        <li key={perk} className="flex items-start gap-3">
+                          <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
+                            <Check size={11} strokeWidth={3} className="text-white" />
+                          </span>
+                          <span className={`text-sm leading-relaxed ${s.accent ? "text-white/70" : "text-black/65"}`}>{perk}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Términos */}
+                    {s.terms && (
+                      <p className="text-white/30 text-xs mb-8 leading-relaxed border-l border-white/15 pl-3">
+                        {s.terms}
+                      </p>
+                    )}
+
+                    <Link
+                      href="#contacto"
+                      className={`inline-flex items-center gap-2 text-sm font-semibold mt-auto hover:gap-3 transition-all duration-200 group ${s.accent ? "text-white/60 hover:text-white" : "text-black/60 hover:text-black"}`}
+                    >
+                      {s.cta}
+                      <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+                    </Link>
+                  </div>
                 </div>
               </AnimateIn>
             ))}
@@ -268,10 +337,9 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 4. STATS ─────────────────────────────────────────────────────── */}
+      {/* ── 5. STATS ─────────────────────────────────────────────────────── */}
       <section className="bg-[#111111] py-28 lg:py-36 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8 border border-white/8">
             {stats.map((s, i) => (
               <AnimateIn key={s.label} delay={i * 0.08} direction="none">
@@ -289,7 +357,7 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 5. EL PROCESO ────────────────────────────────────────────────── */}
+      {/* ── 6. EL PROCESO ────────────────────────────────────────────────── */}
       <section className="bg-black py-28 lg:py-36 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -308,7 +376,6 @@ export default function CondominiosPage() {
               return (
                 <AnimateIn key={step.number} delay={i * 0.1} direction="none">
                   <div className="bg-black p-10 flex flex-col gap-6 h-full hover:bg-white/[0.03] transition-colors duration-300">
-                    {/* Número + ícono */}
                     <div className="flex items-start justify-between">
                       <span className="text-6xl font-black text-white/8 leading-none tracking-tighter select-none">
                         {step.number}
@@ -317,7 +384,6 @@ export default function CondominiosPage() {
                         <Icon size={18} className="text-[#CC1C1C]" />
                       </div>
                     </div>
-
                     <div className="flex flex-col gap-2">
                       <h3 className="text-white font-bold text-base leading-snug">
                         {step.title}
@@ -334,7 +400,7 @@ export default function CondominiosPage() {
         </div>
       </section>
 
-      {/* ── 6. CTA FINAL ─────────────────────────────────────────────────── */}
+      {/* ── 7. CTA FINAL ─────────────────────────────────────────────────── */}
       <ContactCTA title="¿Listo para modernizar el gimnasio de tu condominio?" />
     </>
   );
