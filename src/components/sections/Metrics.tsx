@@ -5,13 +5,45 @@ import { useInView } from "framer-motion";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 
 const stats = [
-  { prefix: "+", target: 100, suffix: "",  label: "Proyectos por año",        detail: "Espacios fitness instalados anualmente en toda la República." },
-  { prefix: "+", target: 15,  suffix: "",  label: "Años de experiencia",      detail: "Liderando el mercado de equipamiento fitness en México." },
-  { prefix: "",  target: 6,   suffix: "",  label: "Marcas exclusivas",        detail: "Las marcas más reconocidas del mundo bajo un mismo techo." },
-  { prefix: "+", target: 500, suffix: "",  label: "Clientes satisfechos",     detail: "Desde condominios boutique hasta grandes complejos hoteleros." },
+  {
+    prefix: "+",
+    target: 100,
+    suffix: "",
+    label: "Proyectos por año",
+    detail: "Espacios fitness instalados anualmente en toda la República.",
+  },
+  {
+    prefix: "+",
+    target: 15,
+    suffix: "",
+    label: "Años de experiencia",
+    detail: "Liderando el mercado de equipamiento fitness en México.",
+  },
+  {
+    prefix: "",
+    target: 6,
+    suffix: "",
+    label: "Marcas exclusivas",
+    detail: "Las marcas más reconocidas del mundo bajo un mismo techo.",
+  },
+  {
+    prefix: "+",
+    target: 500,
+    suffix: "",
+    label: "Clientes satisfechos",
+    detail: "Desde condominios boutique hasta grandes complejos hoteleros.",
+  },
 ];
 
-function Counter({ prefix, target, suffix }: { prefix: string; target: number; suffix: string }) {
+function Counter({
+  prefix,
+  target,
+  suffix,
+}: {
+  prefix: string;
+  target: number;
+  suffix: string;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
 
@@ -41,22 +73,12 @@ function Counter({ prefix, target, suffix }: { prefix: string; target: number; s
 
 export default function Stats() {
   return (
-    <section className="bg-black py-28 lg:py-36 border-t border-white/5">
+    <section className="bg-black py-32 lg:py-44 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <AnimateIn className="mb-16">
-          <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
-            Trayectoria
-          </p>
-          <h2 className="text-4xl lg:text-6xl font-black text-white tracking-tight">
-            Números que hablan por sí solos
-          </h2>
-        </AnimateIn>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/8 border border-white/8">
           {stats.map((s, i) => (
-            <AnimateIn key={i} delay={i * 0.08} className="p-10 lg:p-14">
-              <div className="text-7xl lg:text-8xl font-black text-white leading-none tracking-tighter mb-4">
+            <AnimateIn key={i} delay={i * 0.08} className="p-12 lg:p-16">
+              <div className="text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter mb-5">
                 <Counter prefix={s.prefix} target={s.target} suffix={s.suffix} />
               </div>
               <div className="text-white font-semibold text-base mb-2 leading-tight">
