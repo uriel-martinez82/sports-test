@@ -42,13 +42,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-[72px]">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <div className="w-7 h-7 bg-[#CC1C1C] flex items-center justify-center">
-              <span className="text-white font-black text-[11px] leading-none tracking-tighter">SS</span>
-            </div>
-            <span className="text-white font-bold text-base tracking-tight">
-              Sport Solutions
-            </span>
+          <Link href="/" className="shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Sport Solutions"
+              className={`h-10 w-auto object-contain transition-all duration-500 ${
+                scrolled ? "" : "brightness-0 invert"
+              }`}
+            />
           </Link>
 
           {/* Desktop nav */}
