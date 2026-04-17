@@ -38,6 +38,16 @@ export default function Navbar() {
         scrolled ? "bg-black/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
+      {/* Top gradient — only when transparent, sits behind all content */}
+      {!scrolled && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 -z-10 h-32 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%)",
+          }}
+        />
+      )}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-[72px]">
 
