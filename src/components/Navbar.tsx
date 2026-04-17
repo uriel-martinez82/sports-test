@@ -47,9 +47,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Sport Solutions"
-              className={`h-10 w-auto object-contain transition-all duration-500 ${
-                scrolled ? "" : "brightness-0 invert"
-              }`}
+              className="h-10 w-auto object-contain"
             />
           </Link>
 
