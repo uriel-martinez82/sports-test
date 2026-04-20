@@ -15,7 +15,7 @@ const cotizaItems = [
 
 const equipoItems = [
   { label: "Bicicletas de Spinning",      href: "/equipo/bicicletas-de-spinning" },
-  { label: "Caminadoras",                 href: "/equipo/caminadoras" },
+  { label: "Caminadoras",                 href: "/equipo/caminadoras"                },
   { label: "Elípticas",                   href: "/equipo/elipticas" },
   { label: "Equipos de peso libre",       href: "/equipo/peso-libre" },
   { label: "Equipos de peso integrado",   href: "/equipo/peso-integrado" },
