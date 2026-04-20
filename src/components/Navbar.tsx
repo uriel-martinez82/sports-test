@@ -13,17 +13,27 @@ const cotizaItems = [
   { label: "Universidades",             href: "/cotiza/universidades" },
 ];
 
+const equipoItems = [
+  { label: "Bicicletas de Spinning",      href: "/equipo/bicicletas-de-spinning" },
+  { label: "Caminadoras",                 href: "/equipo/caminadoras" },
+  { label: "Elípticas",                   href: "/equipo/elipticas" },
+  { label: "Equipos de peso libre",       href: "/equipo/peso-libre" },
+  { label: "Equipos de peso integrado",   href: "/equipo/peso-integrado" },
+  { label: "Equipo Funcional",            href: "/equipo/funcional" },
+  { label: "Piso para gimnasio",          href: "/equipo/piso-gimnasio" },
+];
+
 const navLinks = [
-  { label: "Equipo por categoría", href: "#equipos" },
-  { label: "Marcas",               href: "#marcas" },
-  { label: "Servicios",            href: "#servicios" },
-  { label: "Blog",                 href: "#blog" },
-  { label: "Contacto",             href: "#contacto" },
+  { label: "Marcas",    href: "#marcas" },
+  { label: "Servicios", href: "#servicios" },
+  { label: "Blog",      href: "#blog" },
+  { label: "Contacto",  href: "#contacto" },
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen]             = useState(false);
-  const [mobileDropOpen, setMobileDropOpen] = useState(false);
+  const [menuOpen, setMenuOpen]                 = useState(false);
+  const [mobileDropOpen, setMobileDropOpen]     = useState(false);
+  const [mobileEquipoOpen, setMobileEquipoOpen] = useState(false);
 
   return (
     <header
@@ -76,6 +86,45 @@ export default function Navbar() {
                       text-[13px] text-gray-700 hover:text-black hover:bg-gray-50
                       transition-colors duration-150
                       ${i < cotizaItems.length - 1 ? "border-b border-gray-100" : ""}
+                    `}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#CC1C1C] shrink-0" />
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* "Equipo por categoría" con dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1.5 text-[13px] text-white/70 hover:text-white transition-colors duration-150 tracking-wide px-3 py-2 rounded-sm">
+                Equipo por categoría
+                <ChevronDown
+                  size={13}
+                  className="mt-px transition-transform duration-200 group-hover:rotate-180"
+                />
+              </button>
+
+              {/* Dropdown panel */}
+              <div
+                className={`
+                  absolute top-full left-0 mt-2 w-64
+                  bg-white border border-gray-100
+                  shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+                  opacity-0 invisible translate-y-1
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                  transition-all duration-200 ease-out
+                `}
+              >
+                {equipoItems.map((item, i) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={`
+                      flex items-center gap-3 px-5 py-3.5
+                      text-[13px] text-gray-700 hover:text-black hover:bg-gray-50
+                      transition-colors duration-150
+                      ${i < equipoItems.length - 1 ? "border-b border-gray-100" : ""}
                     `}
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#CC1C1C] shrink-0" />
@@ -144,6 +193,35 @@ export default function Navbar() {
                       key={item.label}
                       href={item.href}
                       onClick={() => { setMenuOpen(false); setMobileDropOpen(false); }}
+                      className="text-white/55 text-sm py-2.5 hover:text-white transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Equipo por categoría con acordeón */}
+            <div className="border-b border-white/8">
+              <button
+                onClick={() => setMobileEquipoOpen(!mobileEquipoOpen)}
+                className="flex items-center justify-between w-full text-white/80 text-[15px] py-3.5 hover:text-white transition-colors"
+              >
+                Equipo por categoría
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-200 ${mobileEquipoOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {mobileEquipoOpen && (
+                <div className="flex flex-col pl-4 border-l-2 border-[#CC1C1C]/40 mb-3">
+                  {equipoItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => { setMenuOpen(false); setMobileEquipoOpen(false); }}
                       className="text-white/55 text-sm py-2.5 hover:text-white transition-colors"
                     >
                       {item.label}
