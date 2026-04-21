@@ -36,9 +36,12 @@ export default function Navbar() {
   const [mobileEquipoOpen, setMobileEquipoOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-sm border-b border-white/[0.06]">
+    <header
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{ backgroundColor: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)" }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-[60px]">
+        <div className="flex items-center justify-between h-16 lg:h-[72px]">
 
           {/* Logo */}
           <Link href="/" className="shrink-0">
@@ -171,7 +174,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-[#0A0A0A] border-t border-white/[0.06]">
+        <div className="lg:hidden bg-black border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col">
 
             {/* Cotiza con acordeón */}
