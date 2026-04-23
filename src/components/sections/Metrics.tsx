@@ -78,10 +78,10 @@ export default function Stats() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/8 border border-white/8">
           {stats.map((s, i) => (
             <AnimateIn key={i} delay={i * 0.08} className="p-10 lg:p-14 overflow-hidden">
-              <div className="font-condensed font-black text-7xl lg:text-8xl text-white leading-none tracking-tighter mb-5">
+              <div className="font-condensed font-black text-5xl lg:text-6xl text-white leading-none tracking-tighter mb-5">
                 <Counter prefix={s.prefix} target={s.target} suffix={s.suffix} />
               </div>
-              <div className="font-sans font-bold text-sm uppercase tracking-wider text-white mb-2 leading-tight">
+              <div className="font-sans font-bold text-xs uppercase tracking-widest text-white mb-2 leading-tight">
                 {s.label}
               </div>
               <div className="font-sans font-normal text-sm text-white/35 leading-relaxed">
