@@ -17,7 +17,7 @@ const sections = [
   {
     id: "brands-feature",
     imageRight: false,
-    dark: true,
+    dark: false,
     image:
       "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/stages_eqx_scbikes_700x450.jpg",
     title: "Las mejores marcas del mundo",
