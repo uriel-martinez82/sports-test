@@ -152,19 +152,19 @@ export default function UniversidadesPage() {
       />
 
       {/* ── 3. POR QUÉ UN GIMNASIO EN TU UNIVERSIDAD ────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 overflow-hidden">
+      <section className="bg-white py-28 lg:py-36 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
             <div>
               <AnimateIn>
-                <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                   Por qué un gimnasio en tu universidad
                 </p>
-                <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                <h2 className="text-4xl lg:text-6xl font-black text-black leading-tight tracking-tight mb-6">
                   Bienestar estudiantil que genera sentido de pertenencia
                 </h2>
-                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
+                <p className="text-black/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
                   Las nuevas generaciones valoran profundamente el bienestar físico, mental y
                   emocional. Un gimnasio bien equipado es parte esencial de la propuesta de valor
                   de cualquier institución educativa moderna. En Sport Solutions trabajamos en
@@ -181,7 +181,7 @@ export default function UniversidadesPage() {
                       <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
                         <Check size={11} strokeWidth={3} className="text-white" />
                       </span>
-                      <span className="text-white/75 text-sm lg:text-base leading-relaxed">{b}</span>
+                      <span className="text-black/75 text-sm lg:text-base leading-relaxed">{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -190,7 +190,7 @@ export default function UniversidadesPage() {
               <AnimateIn delay={0.2}>
                 <Link
                   href="#contacto"
-                  className="inline-flex items-center border border-white/70 text-white font-semibold text-base px-10 py-4 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
+                  className="inline-flex items-center border border-black/70 text-black font-semibold text-base px-10 py-4 hover:bg-black hover:text-white transition-all duration-200 tracking-wide"
                 >
                   Habla con un especialista
                 </Link>
@@ -284,31 +284,31 @@ export default function UniversidadesPage() {
       </section>
 
       {/* ── 5. PAQUETES POR TAMAÑO ───────────────────────────────────────── */}
-      <section className="bg-[#111111] py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <AnimateIn className="mb-14">
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               Paquetes
             </p>
-            <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
               Paquetes según el tamaño de tu espacio
             </h2>
           </AnimateIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-gray-100">
             {tiers.map((t, i) => (
               <AnimateIn key={t.size} delay={i * 0.1} direction="none">
-                <div className={`flex flex-col h-full p-10 lg:p-14 ${t.accent ? "bg-[#CC1C1C]" : "bg-[#111111]"}`}>
+                <div className={`flex flex-col h-full p-10 lg:p-14 ${t.accent ? "bg-[#CC1C1C]" : "bg-white"}`}>
 
                   <div className="mb-8">
-                    <p className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${t.accent ? "text-white/70" : "text-white/30"}`}>
+                    <p className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${t.accent ? "text-white/70" : "text-black/30"}`}>
                       {t.badge}
                     </p>
-                    <h3 className="text-2xl font-black text-white tracking-tight leading-tight mb-1">
+                    <h3 className={`text-2xl font-black tracking-tight leading-tight mb-1 ${t.accent ? "text-white" : "text-black"}`}>
                       {t.size}
                     </h3>
-                    <p className={`text-xs font-semibold uppercase tracking-widest ${t.accent ? "text-white/60" : "text-white/25"}`}>
+                    <p className={`text-xs font-semibold uppercase tracking-widest ${t.accent ? "text-white/60" : "text-black/25"}`}>
                       {t.area}
                     </p>
                   </div>
@@ -318,14 +318,14 @@ export default function UniversidadesPage() {
                     {t.items.map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
                         <span className={`mt-1 w-1 h-1 rounded-full shrink-0 ${t.accent ? "bg-white/60" : "bg-[#CC1C1C]"}`} />
-                        <span className={`text-sm leading-relaxed ${t.accent ? "text-white/80" : "text-white/45"}`}>{item}</span>
+                        <span className={`text-sm leading-relaxed ${t.accent ? "text-white/80" : "text-black/45"}`}>{item}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Precio */}
-                  <div className={`py-4 border-t mb-6 ${t.accent ? "border-white/20" : "border-white/8"}`}>
-                    <p className={`text-2xl font-black tracking-tight ${t.accent ? "text-white" : "text-white/70"}`}>
+                  <div className={`py-4 border-t mb-6 ${t.accent ? "border-white/20" : "border-gray-100"}`}>
+                    <p className={`text-2xl font-black tracking-tight ${t.accent ? "text-white" : "text-black/70"}`}>
                       {t.price}
                     </p>
                   </div>
@@ -335,7 +335,7 @@ export default function UniversidadesPage() {
                     className={`inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest px-6 py-4 transition-all duration-200 group ${
                       t.accent
                         ? "bg-white text-[#CC1C1C] hover:bg-white/90"
-                        : "border border-white/15 text-white hover:bg-white/5"
+                        : "border border-black/15 text-black hover:bg-gray-50"
                     }`}
                   >
                     Solicitar cotización
@@ -349,19 +349,19 @@ export default function UniversidadesPage() {
       </section>
 
       {/* ── 6. MANTENIMIENTO Y SOPORTE ───────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 overflow-hidden border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 overflow-hidden border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
             <div>
               <AnimateIn>
-                <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                   Mantenimiento y soporte
                 </p>
-                <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                <h2 className="text-4xl lg:text-6xl font-black text-black leading-tight tracking-tight mb-6">
                   Soporte técnico certificado
                 </h2>
-                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
+                <p className="text-black/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
                   Nuestros técnicos están capacitados exclusivamente para dar servicio a las marcas
                   que distribuimos. Garantías directas, mejor tiempo de respuesta en refacciones y
                   asistencia técnica continua para que tu espacio siempre esté en perfecto
@@ -376,7 +376,7 @@ export default function UniversidadesPage() {
                       <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
                         <Check size={11} strokeWidth={3} className="text-white" />
                       </span>
-                      <span className="text-white/75 text-sm lg:text-base leading-relaxed">{b}</span>
+                      <span className="text-black/75 text-sm lg:text-base leading-relaxed">{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -385,7 +385,7 @@ export default function UniversidadesPage() {
               <AnimateIn delay={0.2}>
                 <Link
                   href="#contacto"
-                  className="inline-flex items-center border border-white/70 text-white font-semibold text-base px-10 py-4 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
+                  className="inline-flex items-center border border-black/70 text-black font-semibold text-base px-10 py-4 hover:bg-black hover:text-white transition-all duration-200 tracking-wide"
                 >
                   Solicitar información
                 </Link>
@@ -416,16 +416,16 @@ export default function UniversidadesPage() {
       </section>
 
       {/* ── 7. STATS ─────────────────────────────────────────────────────── */}
-      <section className="bg-[#0a0a0a] py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8 border border-white/8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-100 border border-gray-100">
             {stats.map((s, i) => (
               <AnimateIn key={s.label} delay={i * 0.08} direction="none">
                 <div className="p-10 lg:p-14 flex flex-col gap-3">
-                  <div className="text-7xl lg:text-8xl font-black text-white leading-none tracking-tighter">
+                  <div className="text-7xl lg:text-8xl font-black text-black leading-none tracking-tighter">
                     {s.value}
                   </div>
-                  <div className="text-white/45 text-sm leading-snug">
+                  <div className="text-black/45 text-sm leading-snug">
                     {s.label}
                   </div>
                 </div>

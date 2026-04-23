@@ -31,28 +31,28 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-[#0d0d0d] py-28 lg:py-36 border-t border-white/5">
+    <section id="servicios" className="bg-white py-28 lg:py-36 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
         <AnimateIn className="mb-14">
-          <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+          <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
             Servicios
           </p>
-          <h2 className="text-4xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="text-4xl lg:text-6xl font-black text-black tracking-tight">
             Más que equipamiento
           </h2>
         </AnimateIn>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-white/8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-gray-100">
           {services.map((s, i) => {
             const Icon = s.icon;
             return (
               <AnimateIn
                 key={s.title}
                 delay={i * 0.1}
-                className="bg-[#0a0a0a] hover:bg-white/[0.03] transition-colors duration-300"
+                className="bg-white hover:bg-gray-50 transition-colors duration-300"
               >
                 <div className="p-12 flex flex-col h-full gap-7">
                   <div className="w-11 h-11 bg-[#CC1C1C]/10 border border-[#CC1C1C]/20 flex items-center justify-center">
@@ -60,17 +60,17 @@ export default function Services() {
                   </div>
 
                   <div className="flex flex-col gap-3 flex-1">
-                    <h3 className="text-white font-bold text-xl leading-tight">
+                    <h3 className="text-black font-bold text-xl leading-tight">
                       {s.title}
                     </h3>
-                    <p className="text-white/45 text-sm leading-relaxed">
+                    <p className="text-black/45 text-sm leading-relaxed">
                       {s.description}
                     </p>
                   </div>
 
                   <Link
                     href={s.href}
-                    className="inline-flex items-center gap-2 text-white/60 text-xs font-semibold uppercase tracking-widest hover:text-white hover:gap-3 transition-all duration-200 group"
+                    className="inline-flex items-center gap-2 text-black/60 text-xs font-semibold uppercase tracking-widest hover:text-black hover:gap-3 transition-all duration-200 group"
                   >
                     {s.cta}
                     <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" />

@@ -143,7 +143,7 @@ export default function IndoorCyclingPage() {
       </section>
 
       {/* ── 2. POR QUÉ STAGES ────────────────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 overflow-hidden">
+      <section className="bg-white py-28 lg:py-36 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
@@ -157,17 +157,17 @@ export default function IndoorCyclingPage() {
                     src="https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg"
                     alt="Stages Cycling"
                     className="h-7 w-auto"
-                    style={{ filter: "brightness(0) invert(1)" }}
+                    style={{ filter: "brightness(0)" }}
                   />
                 </div>
 
-                <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                   Por qué Stages
                 </p>
-                <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                <h2 className="text-4xl lg:text-6xl font-black text-black leading-tight tracking-tight mb-6">
                   La bicicleta que usan los mejores estudios
                 </h2>
-                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-8 max-w-md">
+                <p className="text-black/55 text-base lg:text-lg font-light leading-relaxed mb-8 max-w-md">
                   Sport Solutions es distribuidor exclusivo de Stages Cycling en México.
                   La serie SC es la bicicleta elegida por estudios líderes como Síclo y SoulCycle,
                   diseñada para resistir las clases más demandantes con mínimo mantenimiento.
@@ -175,11 +175,11 @@ export default function IndoorCyclingPage() {
 
                 {/* Cita Equinox */}
                 <blockquote className="border-l-2 border-[#CC1C1C] pl-5 mb-10 max-w-md">
-                  <p className="text-white/75 text-sm lg:text-base italic leading-relaxed mb-2">
+                  <p className="text-black/75 text-sm lg:text-base italic leading-relaxed mb-2">
                     &ldquo;We&apos;ve partnered exclusively with Stages to bring the most technologically
                     advanced group indoor cycles to our clubs.&rdquo;
                   </p>
-                  <cite className="text-white/35 text-xs font-semibold uppercase tracking-widest not-italic">
+                  <cite className="text-black/35 text-xs font-semibold uppercase tracking-widest not-italic">
                     — Equinox
                   </cite>
                 </blockquote>
@@ -192,7 +192,7 @@ export default function IndoorCyclingPage() {
                       <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
                         <Check size={11} strokeWidth={3} className="text-white" />
                       </span>
-                      <span className="text-white/75 text-sm lg:text-base leading-relaxed">{b}</span>
+                      <span className="text-black/75 text-sm lg:text-base leading-relaxed">{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -201,7 +201,7 @@ export default function IndoorCyclingPage() {
               <AnimateIn delay={0.2}>
                 <Link
                   href="#contacto"
-                  className="inline-flex items-center border border-white/70 text-white font-semibold text-base px-10 py-4 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
+                  className="inline-flex items-center border border-black/70 text-black font-semibold text-base px-10 py-4 hover:bg-black hover:text-white transition-all duration-200 tracking-wide"
                 >
                   Habla con un especialista
                 </Link>
@@ -298,44 +298,44 @@ export default function IndoorCyclingPage() {
       </section>
 
       {/* ── 4. CUÁNTO CUESTA ─────────────────────────────────────────────── */}
-      <section className="bg-[#111111] py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <AnimateIn className="mb-14">
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               Inversión
             </p>
-            <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight max-w-2xl">
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight max-w-2xl">
               Rangos de inversión reales
             </h2>
           </AnimateIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-white/5 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-gray-100 mb-10">
             {rooms.map((r, i) => (
               <AnimateIn key={r.size} delay={i * 0.08} direction="none">
-                <div className="bg-[#111111] p-10 lg:p-12 flex flex-col gap-6 h-full">
+                <div className="bg-white p-10 lg:p-12 flex flex-col gap-6 h-full hover:bg-gray-50 transition-colors duration-300">
                   <div>
-                    <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-1">
+                    <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-1">
                       {r.size}
                     </p>
-                    <p className="text-white/25 text-sm">{r.area} · {r.bikes}</p>
+                    <p className="text-black/25 text-sm">{r.area} · {r.bikes}</p>
                   </div>
 
                   <div className="flex flex-col gap-1">
-                    <p className="text-white/40 text-xs uppercase tracking-widest">Desde</p>
-                    <p className="text-5xl font-black text-white leading-none tracking-tight">
+                    <p className="text-black/40 text-xs uppercase tracking-widest">Desde</p>
+                    <p className="text-5xl font-black text-black leading-none tracking-tight">
                       {r.min}
                     </p>
-                    <p className="text-white/40 text-xs uppercase tracking-widest mt-2">Hasta</p>
+                    <p className="text-black/40 text-xs uppercase tracking-widest mt-2">Hasta</p>
                     <p className="text-3xl font-black text-[#CC1C1C] leading-none tracking-tight">
                       {r.max}
                     </p>
-                    <p className="text-white/30 text-xs mt-1">MXN</p>
+                    <p className="text-black/30 text-xs mt-1">MXN</p>
                   </div>
 
                   <Link
                     href="#contacto"
-                    className="inline-flex items-center gap-2 text-white/55 text-xs font-semibold uppercase tracking-widest hover:text-white hover:gap-3 transition-all duration-200 group mt-auto"
+                    className="inline-flex items-center gap-2 text-black/55 text-xs font-semibold uppercase tracking-widest hover:text-black hover:gap-3 transition-all duration-200 group mt-auto"
                   >
                     Cotizar esta sala
                     <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -346,41 +346,41 @@ export default function IndoorCyclingPage() {
           </div>
 
           <AnimateIn delay={0.2}>
-            <p className="text-white/35 text-sm leading-relaxed border-l-2 border-[#CC1C1C]/50 pl-4 max-w-2xl">
+            <p className="text-black/35 text-sm leading-relaxed border-l-2 border-[#CC1C1C]/50 pl-4 max-w-2xl">
               Los estudios de indoor cycling generan ganancias 55% mayores que cualquier otro
-              tipo de estudio — <span className="text-white/55">ASF (Association of Fitness Studios)</span>
+              tipo de estudio — <span className="text-black/55">ASF (Association of Fitness Studios)</span>
             </p>
           </AnimateIn>
         </div>
       </section>
 
       {/* ── 5. LO QUE INCLUYE ────────────────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <AnimateIn className="mb-14">
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               Servicio completo
             </p>
-            <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
               Lo que incluye
             </h2>
           </AnimateIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-white/5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-gray-100">
             {includes.map((item, i) => {
               const Icon = item.icon;
               return (
                 <AnimateIn key={item.title} delay={i * 0.08} direction="none">
-                  <div className="bg-black p-10 flex flex-col gap-5 h-full hover:bg-white/[0.03] transition-colors duration-300">
+                  <div className="bg-white p-10 flex flex-col gap-5 h-full hover:bg-gray-50 transition-colors duration-300">
                     <div className="w-11 h-11 bg-[#CC1C1C]/10 border border-[#CC1C1C]/20 flex items-center justify-center shrink-0">
                       <Icon size={18} className="text-[#CC1C1C]" />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <h3 className="text-white font-bold text-base leading-snug">
+                      <h3 className="text-black font-bold text-base leading-snug">
                         {item.title}
                       </h3>
-                      <p className="text-white/40 text-sm leading-relaxed">
+                      <p className="text-black/40 text-sm leading-relaxed">
                         {item.description}
                       </p>
                     </div>

@@ -202,19 +202,19 @@ export default function CondominiosPage() {
       />
 
       {/* ── 3. POR QUÉ UN GIMNASIO ───────────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 overflow-hidden">
+      <section className="bg-white py-28 lg:py-36 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
             <div>
               <AnimateIn>
-                <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                   Por qué un gimnasio en tu condominio
                 </p>
-                <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                <h2 className="text-4xl lg:text-6xl font-black text-black leading-tight tracking-tight mb-6">
                   La amenidad más valorada por tus residentes
                 </h2>
-                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
+                <p className="text-black/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
                   El gimnasio es la primera amenidad que consideran los desarrolladores al diseñar un
                   nuevo edificio. Un gimnasio bien equipado puede aumentar entre 3.5 y 9 USD por mes
                   el cargo por servicio, y diferencia tu propiedad en un mercado altamente competitivo.
@@ -229,7 +229,7 @@ export default function CondominiosPage() {
                       <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
                         <Check size={11} strokeWidth={3} className="text-white" />
                       </span>
-                      <span className="text-white/75 text-sm lg:text-base leading-relaxed">{b}</span>
+                      <span className="text-black/75 text-sm lg:text-base leading-relaxed">{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -238,7 +238,7 @@ export default function CondominiosPage() {
               <AnimateIn delay={0.2}>
                 <Link
                   href="#contacto"
-                  className="inline-flex items-center border border-white/70 text-white font-semibold text-base px-10 py-4 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
+                  className="inline-flex items-center border border-black/70 text-black font-semibold text-base px-10 py-4 hover:bg-black hover:text-white transition-all duration-200 tracking-wide"
                 >
                   Habla con un especialista
                 </Link>
@@ -418,16 +418,16 @@ export default function CondominiosPage() {
       </section>
 
       {/* ── 6. STATS ─────────────────────────────────────────────────────── */}
-      <section className="bg-[#111111] py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8 border border-white/8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-100 border border-gray-100">
             {stats.map((s, i) => (
               <AnimateIn key={s.label} delay={i * 0.08} direction="none">
                 <div className="p-10 lg:p-14 flex flex-col gap-3">
-                  <div className="text-7xl lg:text-8xl font-black text-white leading-none tracking-tighter">
+                  <div className="text-7xl lg:text-8xl font-black text-black leading-none tracking-tighter">
                     {s.value}
                   </div>
-                  <div className="text-white/45 text-sm leading-snug">
+                  <div className="text-black/45 text-sm leading-snug">
                     {s.label}
                   </div>
                 </div>
@@ -438,26 +438,26 @@ export default function CondominiosPage() {
       </section>
 
       {/* ── 7. EL PROCESO ────────────────────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <AnimateIn className="mb-16">
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               Proceso
             </p>
-            <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
               Así trabajamos contigo
             </h2>
           </AnimateIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-white/5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-gray-100">
             {steps.map((step, i) => {
               const Icon = step.icon;
               return (
                 <AnimateIn key={step.number} delay={i * 0.1} direction="none">
-                  <div className="bg-black p-10 flex flex-col gap-6 h-full hover:bg-white/[0.03] transition-colors duration-300">
+                  <div className="bg-white p-10 flex flex-col gap-6 h-full hover:bg-gray-50 transition-colors duration-300">
                     <div className="flex items-start justify-between">
-                      <span className="text-6xl font-black text-white/8 leading-none tracking-tighter select-none">
+                      <span className="text-6xl font-black text-black/8 leading-none tracking-tighter select-none">
                         {step.number}
                       </span>
                       <div className="w-11 h-11 bg-[#CC1C1C]/10 border border-[#CC1C1C]/20 flex items-center justify-center shrink-0">
@@ -465,10 +465,10 @@ export default function CondominiosPage() {
                       </div>
                     </div>
                     <div className="flex flex-col gap-2">
-                      <h3 className="text-white font-bold text-base leading-snug">
+                      <h3 className="text-black font-bold text-base leading-snug">
                         {step.title}
                       </h3>
-                      <p className="text-white/40 text-sm leading-relaxed">
+                      <p className="text-black/40 text-sm leading-relaxed">
                         {step.description}
                       </p>
                     </div>

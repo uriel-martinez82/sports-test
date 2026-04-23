@@ -83,10 +83,10 @@ function BrandBanner() {
   const [bannerError, setBannerError] = useState(false);
 
   return (
-    <section className="bg-[#111111] py-20 lg:py-24 border-t border-white/5">
+    <section className="bg-white py-20 lg:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimateIn>
-          <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] text-center mb-10">
+          <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] text-center mb-10">
             Somos representantes exclusivos de Stages y Freemotion en México.
           </p>
 
@@ -98,7 +98,7 @@ function BrandBanner() {
                 src="https://sportsolutions.com.mx/wp-content/uploads/2023/09/StagesFreemotion.png"
                 alt="Stages Cycling y Freemotion — Distribuidores exclusivos en México"
                 className="max-h-24 w-auto object-contain"
-                style={{ filter: "brightness(0) invert(1)" }}
+                style={{ filter: "brightness(0)" }}
                 onError={() => setBannerError(true)}
               />
             </div>
@@ -111,16 +111,16 @@ function BrandBanner() {
                   src="https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg"
                   alt="Stages Cycling"
                   className="h-8 w-auto"
-                  style={{ filter: "brightness(0) invert(1)" }}
+                  style={{ filter: "brightness(0)" }}
                 />
-                <span className="text-white/25 text-[10px] uppercase tracking-widest">Indoor Cycling</span>
+                <span className="text-black/25 text-[10px] uppercase tracking-widest">Indoor Cycling</span>
               </div>
 
-              <div className="w-px h-10 bg-white/10 hidden sm:block" />
+              <div className="w-px h-10 bg-black/10 hidden sm:block" />
 
               <div className="flex flex-col items-center gap-3">
-                <span className="text-white font-black text-2xl tracking-tight">FREEMOTION.</span>
-                <span className="text-white/25 text-[10px] uppercase tracking-widest">Cardio & Fuerza</span>
+                <span className="text-black font-black text-2xl tracking-tight">FREEMOTION.</span>
+                <span className="text-black/25 text-[10px] uppercase tracking-widest">Cardio & Fuerza</span>
               </div>
             </div>
           )}
@@ -199,19 +199,19 @@ export default function DesarrollosInmobiliariosPage() {
       />
 
       {/* ── 3. POR QUÉ UN GIMNASIO ───────────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 overflow-hidden">
+      <section className="bg-white py-28 lg:py-36 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
             <div>
               <AnimateIn>
-                <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                   Por qué un gimnasio en tu desarrollo
                 </p>
-                <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                <h2 className="text-4xl lg:text-6xl font-black text-black leading-tight tracking-tight mb-6">
                   Una amenidad que acelera tus ventas
                 </h2>
-                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
+                <p className="text-black/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
                   Hoy más que nunca, los compradores buscan desarrollos que integren el bienestar como
                   parte de su estilo de vida. Un gimnasio bien equipado es una herramienta poderosa
                   para elevar la plusvalía y acelerar las ventas. Los millennials representan 4 de cada
@@ -227,7 +227,7 @@ export default function DesarrollosInmobiliariosPage() {
                       <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
                         <Check size={11} strokeWidth={3} className="text-white" />
                       </span>
-                      <span className="text-white/75 text-sm lg:text-base leading-relaxed">{b}</span>
+                      <span className="text-black/75 text-sm lg:text-base leading-relaxed">{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -236,7 +236,7 @@ export default function DesarrollosInmobiliariosPage() {
               <AnimateIn delay={0.2}>
                 <Link
                   href="#contacto"
-                  className="inline-flex items-center border border-white/70 text-white font-semibold text-base px-10 py-4 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
+                  className="inline-flex items-center border border-black/70 text-black font-semibold text-base px-10 py-4 hover:bg-black hover:text-white transition-all duration-200 tracking-wide"
                 >
                   Habla con un especialista
                 </Link>
@@ -327,26 +327,26 @@ export default function DesarrollosInmobiliariosPage() {
       </section>
 
       {/* ── 6. NUESTRO PROCESO ───────────────────────────────────────────── */}
-      <section className="bg-[#0a0a0a] py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <AnimateIn className="mb-16">
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               Proceso
             </p>
-            <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
               Así trabajamos con tu desarrollo
             </h2>
           </AnimateIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-white/5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-gray-100">
             {steps.map((step, i) => {
               const Icon = step.icon;
               return (
                 <AnimateIn key={step.number} delay={i * 0.1} direction="none">
-                  <div className="bg-[#0a0a0a] p-10 lg:p-14 flex flex-col gap-6 h-full hover:bg-white/[0.03] transition-colors duration-300">
+                  <div className="bg-white p-10 lg:p-14 flex flex-col gap-6 h-full hover:bg-gray-50 transition-colors duration-300">
                     <div className="flex items-start justify-between">
-                      <span className="text-6xl font-black text-white/8 leading-none tracking-tighter select-none">
+                      <span className="text-6xl font-black text-black/8 leading-none tracking-tighter select-none">
                         {step.number}
                       </span>
                       <div className="w-11 h-11 bg-[#CC1C1C]/10 border border-[#CC1C1C]/20 flex items-center justify-center shrink-0">
@@ -354,10 +354,10 @@ export default function DesarrollosInmobiliariosPage() {
                       </div>
                     </div>
                     <div className="flex flex-col gap-2">
-                      <h3 className="text-white font-bold text-lg leading-snug">
+                      <h3 className="text-black font-bold text-lg leading-snug">
                         {step.title}
                       </h3>
-                      <p className="text-white/40 text-sm leading-relaxed">
+                      <p className="text-black/40 text-sm leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -370,16 +370,16 @@ export default function DesarrollosInmobiliariosPage() {
       </section>
 
       {/* ── 7. STATS ─────────────────────────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8 border border-white/8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-100 border border-gray-100">
             {stats.map((s, i) => (
               <AnimateIn key={s.label} delay={i * 0.08} direction="none">
                 <div className="p-10 lg:p-14 flex flex-col gap-3">
-                  <div className="text-7xl lg:text-8xl font-black text-white leading-none tracking-tighter">
+                  <div className="text-7xl lg:text-8xl font-black text-black leading-none tracking-tighter">
                     {s.value}
                   </div>
-                  <div className="text-white/45 text-sm leading-snug">
+                  <div className="text-black/45 text-sm leading-snug">
                     {s.label}
                   </div>
                 </div>

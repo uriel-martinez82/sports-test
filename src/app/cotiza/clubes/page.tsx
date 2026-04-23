@@ -151,19 +151,19 @@ export default function ClubesPage() {
       />
 
       {/* ── 3. POR QUÉ SPORT SOLUTIONS ───────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 overflow-hidden">
+      <section className="bg-white py-28 lg:py-36 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
             <div>
               <AnimateIn>
-                <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                   Por qué Sport Solutions
                 </p>
-                <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                <h2 className="text-4xl lg:text-6xl font-black text-black leading-tight tracking-tight mb-6">
                   El equipo que eligen los mejores clubes de México
                 </h2>
-                <p className="text-white/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
+                <p className="text-black/55 text-base lg:text-lg font-light leading-relaxed mb-10 max-w-md">
                   Los socios de un club no solo buscan mantenerse en forma, buscan vivir una
                   experiencia integral. El gimnasio es un punto clave en tu propuesta de valor y
                   debe mantenerse siempre actualizado y funcional. En Sport Solutions equipamos
@@ -178,7 +178,7 @@ export default function ClubesPage() {
                       <span className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#CC1C1C] flex items-center justify-center">
                         <Check size={11} strokeWidth={3} className="text-white" />
                       </span>
-                      <span className="text-white/75 text-sm lg:text-base leading-relaxed">{b}</span>
+                      <span className="text-black/75 text-sm lg:text-base leading-relaxed">{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -187,7 +187,7 @@ export default function ClubesPage() {
               <AnimateIn delay={0.2}>
                 <Link
                   href="#contacto"
-                  className="inline-flex items-center border border-white/70 text-white font-semibold text-base px-10 py-4 hover:bg-white hover:text-black transition-all duration-200 tracking-wide"
+                  className="inline-flex items-center border border-black/70 text-black font-semibold text-base px-10 py-4 hover:bg-black hover:text-white transition-all duration-200 tracking-wide"
                 >
                   Habla con un especialista
                 </Link>
@@ -217,16 +217,16 @@ export default function ClubesPage() {
       </section>
 
       {/* ── 4. CLIENTES DESTACADOS ───────────────────────────────────────── */}
-      <section className="bg-[#111111] py-20 lg:py-24 border-t border-white/5">
+      <section className="bg-white py-20 lg:py-24 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <AnimateIn>
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               Clientes destacados
             </p>
-            <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tight mb-3">
+            <h2 className="text-4xl lg:text-5xl font-black text-black tracking-tight mb-3">
               Confían en nosotros
             </h2>
-            <p className="text-white/35 text-sm mb-14">
+            <p className="text-black/35 text-sm mb-14">
               Clubes deportivos y gimnasios líderes de México
             </p>
           </AnimateIn>
@@ -236,11 +236,11 @@ export default function ClubesPage() {
               {clients.map((name, i) => (
                 <span
                   key={name}
-                  className="text-white/70 font-bold text-lg tracking-tight hover:text-white transition-colors duration-200 cursor-default"
+                  className="text-black/70 font-bold text-lg tracking-tight hover:text-black transition-colors duration-200 cursor-default"
                 >
                   {name}
                   {i < clients.length - 1 && (
-                    <span className="text-white/15 font-light ml-10">·</span>
+                    <span className="text-black/15 font-light ml-10">·</span>
                   )}
                 </span>
               ))}
@@ -248,7 +248,7 @@ export default function ClubesPage() {
           </AnimateIn>
 
           <AnimateIn delay={0.2}>
-            <p className="text-white/20 text-xs mt-10 uppercase tracking-widest">
+            <p className="text-black/20 text-xs mt-10 uppercase tracking-widest">
               Entre muchos otros clubes en los 32 estados de México
             </p>
           </AnimateIn>
@@ -313,29 +313,29 @@ export default function ClubesPage() {
       </section>
 
       {/* ── 6. INVERSIÓN REFERENCIAL ─────────────────────────────────────── */}
-      <section className="bg-[#0a0a0a] py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           <AnimateIn className="mb-14">
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               Inversión
             </p>
-            <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
               Rangos de inversión para equipar tu club
             </h2>
           </AnimateIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-gray-100">
             {tiers.map((t, i) => (
               <AnimateIn key={t.size} delay={i * 0.1} direction="none">
-                <div className={`flex flex-col h-full p-10 lg:p-14 ${t.accent ? "bg-[#CC1C1C]" : "bg-[#0a0a0a]"}`}>
-                  <p className={`text-[10px] font-bold uppercase tracking-widest mb-2 ${t.accent ? "text-white/70" : "text-white/30"}`}>
+                <div className={`flex flex-col h-full p-10 lg:p-14 ${t.accent ? "bg-[#CC1C1C]" : "bg-white"}`}>
+                  <p className={`text-[10px] font-bold uppercase tracking-widest mb-2 ${t.accent ? "text-white/70" : "text-black/30"}`}>
                     {t.area}
                   </p>
-                  <h3 className="text-2xl font-black text-white tracking-tight mb-4 leading-tight">
+                  <h3 className={`text-2xl font-black tracking-tight mb-4 leading-tight ${t.accent ? "text-white" : "text-black"}`}>
                     {t.size}
                   </h3>
-                  <p className={`text-sm font-light leading-relaxed flex-1 mb-10 ${t.accent ? "text-white/80" : "text-white/45"}`}>
+                  <p className={`text-sm font-light leading-relaxed flex-1 mb-10 ${t.accent ? "text-white/80" : "text-black/45"}`}>
                     {t.description}
                   </p>
                   <Link
@@ -343,7 +343,7 @@ export default function ClubesPage() {
                     className={`inline-flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-widest px-6 py-4 transition-all duration-200 group ${
                       t.accent
                         ? "bg-white text-[#CC1C1C] hover:bg-white/90"
-                        : "border border-white/20 text-white hover:bg-white/5"
+                        : "border border-black/20 text-black hover:bg-gray-50"
                     }`}
                   >
                     Solicitar cotización
@@ -357,16 +357,16 @@ export default function ClubesPage() {
       </section>
 
       {/* ── 7. STATS ─────────────────────────────────────────────────────── */}
-      <section className="bg-black py-28 lg:py-36 border-t border-white/5">
+      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8 border border-white/8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-100 border border-gray-100">
             {stats.map((s, i) => (
               <AnimateIn key={s.label} delay={i * 0.08} direction="none">
                 <div className="p-10 lg:p-14 flex flex-col gap-3">
-                  <div className="text-7xl lg:text-8xl font-black text-white leading-none tracking-tighter">
+                  <div className="text-7xl lg:text-8xl font-black text-black leading-none tracking-tighter">
                     {s.value}
                   </div>
-                  <div className="text-white/45 text-sm leading-snug">
+                  <div className="text-black/45 text-sm leading-snug">
                     {s.label}
                   </div>
                 </div>
