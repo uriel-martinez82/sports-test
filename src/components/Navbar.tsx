@@ -41,7 +41,7 @@ export default function Navbar() {
       style={{ backgroundColor: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)" }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-[72px]">
+        <div className="flex items-center justify-between h-24 lg:h-[108px]">
 
           {/* Logo */}
           <Link href="/" className="shrink-0">
@@ -58,7 +58,7 @@ export default function Navbar() {
 
             {/* "Cotiza tu proyecto" con dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] uppercase text-white/50 hover:text-white transition-colors duration-150 px-3 py-2">
+              <button className="flex items-center gap-1.5 text-[16px] font-semibold tracking-[0.08em] uppercase text-white/50 hover:text-white transition-colors duration-150 px-3 py-2">
                 Cotiza tu proyecto
                 <ChevronDown
                   size={11}
@@ -83,7 +83,7 @@ export default function Navbar() {
                       href={item.href}
                       className={`
                         flex items-center gap-3 px-5 py-3
-                        text-[12px] font-medium tracking-wide uppercase
+                        text-[16px] font-medium tracking-wide uppercase
                         text-white/50 hover:text-white hover:bg-white/5
                         transition-colors duration-150
                         ${i < cotizaItems.length - 1 ? "border-b border-white/5" : ""}
@@ -99,7 +99,7 @@ export default function Navbar() {
 
             {/* "Equipo por categoría" con dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.08em] uppercase text-white/50 hover:text-white transition-colors duration-150 px-3 py-2">
+              <button className="flex items-center gap-1.5 text-[16px] font-semibold tracking-[0.08em] uppercase text-white/50 hover:text-white transition-colors duration-150 px-3 py-2">
                 Equipo por categoría
                 <ChevronDown
                   size={11}
@@ -124,7 +124,7 @@ export default function Navbar() {
                       href={item.href}
                       className={`
                         flex items-center gap-3 px-5 py-3
-                        text-[12px] font-medium tracking-wide uppercase
+                        text-[16px] font-medium tracking-wide uppercase
                         text-white/50 hover:text-white hover:bg-white/5
                         transition-colors duration-150
                         ${i < equipoItems.length - 1 ? "border-b border-white/5" : ""}
@@ -143,7 +143,7 @@ export default function Navbar() {
               <Link
                 key={l.label}
                 href={l.href}
-                className="text-[12px] font-semibold tracking-[0.08em] uppercase text-white/50 hover:text-white transition-colors duration-150 px-3 py-2"
+                className="text-[16px] font-semibold tracking-[0.08em] uppercase text-white/50 hover:text-white transition-colors duration-150 px-3 py-2"
               >
                 {l.label}
               </Link>
@@ -154,7 +154,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center">
             <Link
               href="tel:+525500000000"
-              className="flex items-center gap-2 text-[11px] font-black tracking-[0.12em] uppercase text-white bg-[#E8420C] px-5 py-2.5 hover:bg-[#d13a0a] transition-colors duration-200"
+              className="flex items-center gap-2 text-[16px] font-black tracking-[0.12em] uppercase text-white bg-[#E8420C] px-5 py-2.5 hover:bg-[#d13a0a] transition-colors duration-200"
             >
               <Phone size={12} strokeWidth={2.5} />
               Llámanos ahora
@@ -181,7 +181,7 @@ export default function Navbar() {
             <div className="border-b border-white/[0.06]">
               <button
                 onClick={() => setMobileDropOpen(!mobileDropOpen)}
-                className="flex items-center justify-between w-full text-white/60 text-[12px] font-semibold tracking-[0.08em] uppercase py-3.5 hover:text-white transition-colors"
+                className="flex items-center justify-between w-full text-white/60 text-[16px] font-semibold tracking-[0.08em] uppercase py-3.5 hover:text-white transition-colors"
               >
                 Cotiza tu proyecto
                 <ChevronDown
@@ -197,7 +197,7 @@ export default function Navbar() {
                       key={item.label}
                       href={item.href}
                       onClick={() => { setMenuOpen(false); setMobileDropOpen(false); }}
-                      className="text-white/40 text-[11px] font-medium tracking-wide uppercase py-2.5 hover:text-white transition-colors"
+                      className="text-white/40 text-[16px] font-medium tracking-wide uppercase py-2.5 hover:text-white transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -210,7 +210,7 @@ export default function Navbar() {
             <div className="border-b border-white/[0.06]">
               <button
                 onClick={() => setMobileEquipoOpen(!mobileEquipoOpen)}
-                className="flex items-center justify-between w-full text-white/60 text-[12px] font-semibold tracking-[0.08em] uppercase py-3.5 hover:text-white transition-colors"
+                className="flex items-center justify-between w-full text-white/60 text-[16px] font-semibold tracking-[0.08em] uppercase py-3.5 hover:text-white transition-colors"
               >
                 Equipo por categoría
                 <ChevronDown
@@ -226,7 +226,7 @@ export default function Navbar() {
                       key={item.label}
                       href={item.href}
                       onClick={() => { setMenuOpen(false); setMobileEquipoOpen(false); }}
-                      className="text-white/40 text-[11px] font-medium tracking-wide uppercase py-2.5 hover:text-white transition-colors"
+                      className="text-white/40 text-[16px] font-medium tracking-wide uppercase py-2.5 hover:text-white transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -241,7 +241,7 @@ export default function Navbar() {
                 key={l.label}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white/60 text-[12px] font-semibold tracking-[0.08em] uppercase py-3.5 hover:text-white transition-colors border-b border-white/[0.06]"
+                className="text-white/60 text-[16px] font-semibold tracking-[0.08em] uppercase py-3.5 hover:text-white transition-colors border-b border-white/[0.06]"
               >
                 {l.label}
               </Link>
@@ -251,7 +251,7 @@ export default function Navbar() {
             <Link
               href="tel:+525500000000"
               onClick={() => setMenuOpen(false)}
-              className="mt-5 flex items-center justify-center gap-2 bg-[#E8420C] text-white font-black text-[11px] tracking-[0.12em] uppercase px-6 py-4 hover:bg-[#d13a0a] transition-colors duration-200"
+              className="mt-5 flex items-center justify-center gap-2 bg-[#E8420C] text-white font-black text-[16px] tracking-[0.12em] uppercase px-6 py-4 hover:bg-[#d13a0a] transition-colors duration-200"
             >
               <Phone size={13} strokeWidth={2.5} />
               Llámanos ahora
