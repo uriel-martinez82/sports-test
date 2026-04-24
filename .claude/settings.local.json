@@ -6,7 +6,8 @@
       "Bash(xargs kill:*)",
       "Bash(npm install:*)",
       "Bash(npx tsc:*)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(node *)"
     ]
   }
 }
