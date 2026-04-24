@@ -344,7 +344,7 @@ export default function DesarrollosInmobiliariosPage() {
               const Icon = step.icon;
               return (
                 <AnimateIn key={step.number} delay={i * 0.1} direction="none">
-                  <div className="bg-white p-10 lg:p-14 flex flex-col gap-6 h-full hover:bg-gray-50 transition-colors duration-300">
+                  <div className="bg-white border border-gray-100 shadow-md p-10 lg:p-14 flex flex-col gap-6 h-full hover:bg-gray-50 hover:shadow-lg transition-shadow duration-200">
                     <div className="flex items-start justify-between">
                       <span className="text-7xl font-black text-gray-200 leading-none tracking-tighter select-none">
                         {step.number}
