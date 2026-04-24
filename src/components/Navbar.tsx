@@ -23,17 +23,23 @@ const equipoItems = [
   { label: "Piso para gimnasio",        href: "/equipo/piso-gimnasio" },
 ];
 
+const serviciosItems = [
+  { label: "Arrendamiento",             href: "/servicios/arrendamiento" },
+  { label: "Mantenimiento de Gimnasios", href: "/servicios/mantenimiento" },
+  { label: "Asesoría Profesional",      href: "/servicios/asesoria" },
+  { label: "Casos de éxito",            href: "/servicios/casos-de-exito" },
+];
+
 const navLinks = [
-  { label: "Marcas",    href: "#marcas" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Blog",      href: "#blog" },
-  { label: "Contacto",  href: "#contacto" },
+  { label: "Blog",     href: "#blog" },
+  { label: "Contacto", href: "#contacto" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen]                 = useState(false);
-  const [mobileDropOpen, setMobileDropOpen]     = useState(false);
-  const [mobileEquipoOpen, setMobileEquipoOpen] = useState(false);
+  const [mobileDropOpen, setMobileDropOpen]         = useState(false);
+  const [mobileEquipoOpen, setMobileEquipoOpen]     = useState(false);
+  const [mobileServiciosOpen, setMobileServiciosOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]">
@@ -142,6 +148,47 @@ export default function Navbar() {
               </div>
             </div>
 
+            {/* "Servicios" con dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1.5 text-[16px] font-semibold tracking-[0.08em] uppercase text-white/50 hover:text-white transition-colors duration-150 px-3 py-2">
+                Servicios
+                <ChevronDown
+                  size={11}
+                  className="mt-px transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#E8420C]"
+                />
+              </button>
+
+              {/* Dropdown panel */}
+              <div className="
+                absolute top-full left-0 mt-1 w-64
+                bg-[#111111] border border-white/10
+                shadow-[0_16px_40px_rgba(0,0,0,0.5)]
+                opacity-0 invisible translate-y-1
+                group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                transition-all duration-200 ease-out
+              ">
+                <div className="h-[2px] bg-[#E8420C] w-full" />
+                <div className="py-1">
+                  {serviciosItems.map((item, i) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className={`
+                        flex items-center gap-3 px-5 py-3
+                        text-[16px] font-medium tracking-wide uppercase
+                        text-white/50 hover:text-white hover:bg-white/5
+                        transition-colors duration-150
+                        ${i < serviciosItems.length - 1 ? "border-b border-white/5" : ""}
+                      `}
+                    >
+                      <span className="w-1 h-1 rounded-full bg-[#E8420C] shrink-0" />
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {/* Links regulares */}
             {navLinks.map((l) => (
               <Link
@@ -230,6 +277,35 @@ export default function Navbar() {
                       key={item.label}
                       href={item.href}
                       onClick={() => { setMenuOpen(false); setMobileEquipoOpen(false); }}
+                      className="text-white/40 text-[16px] font-medium tracking-wide uppercase py-2.5 hover:text-white transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Servicios con acordeón */}
+            <div className="border-b border-white/[0.06]">
+              <button
+                onClick={() => setMobileServiciosOpen(!mobileServiciosOpen)}
+                className="flex items-center justify-between w-full text-white/60 text-[16px] font-semibold tracking-[0.08em] uppercase py-3.5 hover:text-white transition-colors"
+              >
+                Servicios
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-200 ${mobileServiciosOpen ? "rotate-180 text-[#E8420C]" : ""}`}
+                />
+              </button>
+
+              {mobileServiciosOpen && (
+                <div className="flex flex-col pl-4 border-l-2 border-[#E8420C]/40 mb-3">
+                  {serviciosItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => { setMenuOpen(false); setMobileServiciosOpen(false); }}
                       className="text-white/40 text-[16px] font-medium tracking-wide uppercase py-2.5 hover:text-white transition-colors"
                     >
                       {item.label}
