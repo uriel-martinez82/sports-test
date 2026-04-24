@@ -36,14 +36,14 @@ export default function Navbar() {
   const [mobileEquipoOpen, setMobileEquipoOpen] = useState(false);
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50"
-      style={{ backgroundColor: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)" }}
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 lg:h-[108px]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]">
+      <div className="flex items-stretch h-24 lg:h-[108px]">
 
-          {/* Logo */}
+        {/* Diagonal logo area */}
+        <div
+          className="bg-white flex items-center pl-6 shrink-0"
+          style={{ clipPath: "polygon(0 0, 85% 0, 100% 100%, 0 100%)", width: "210px" }}
+        >
           <Link href="/" className="shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -52,6 +52,10 @@ export default function Navbar() {
               className="h-10 w-auto object-contain"
             />
           </Link>
+        </div>
+
+        {/* Nav + CTA wrapper */}
+        <div className="flex-1 flex items-center justify-between px-4 lg:px-8">
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
