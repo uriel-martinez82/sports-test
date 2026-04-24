@@ -32,7 +32,7 @@ const serviciosItems = [
 
 const navLinks = [
   { label: "Blog",     href: "#blog" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export default function Navbar() {
