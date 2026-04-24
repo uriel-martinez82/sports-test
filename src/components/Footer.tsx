@@ -48,13 +48,11 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-7 h-7 bg-[#CC1C1C] flex items-center justify-center">
-                <span className="text-white font-black text-[11px]">SS</span>
-              </div>
-              <span className="text-white font-bold text-base tracking-tight">Sport Solutions</span>
+            <div className="mb-5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-footer.png" alt="Sport Solutions" className="h-10 w-auto object-contain" />
             </div>
-            <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-8">
+            <p className="text-white/70 text-sm leading-relaxed max-w-xs mb-8">
               Diseñamos, equipamos e instalamos espacios fitness profesionales
               en toda la República Mexicana.
             </p>
@@ -63,7 +61,7 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
-                  className="text-white/40 text-xs hover:text-white transition-colors uppercase tracking-widest"
+                  className="text-white/50 text-xs hover:text-white transition-colors uppercase tracking-widest"
                 >
                   {s.label}
                 </a>
@@ -74,7 +72,7 @@ export default function Footer() {
           {/* Columns */}
           {cols.map((col) => (
             <div key={col.heading}>
-              <p className="text-white text-[11px] font-semibold uppercase tracking-[0.15em] mb-5">
+              <p className="text-white font-black text-sm uppercase tracking-widest mb-5">
                 {col.heading}
               </p>
               <ul className="flex flex-col gap-3">
@@ -82,7 +80,7 @@ export default function Footer() {
                   <li key={l.label}>
                     <Link
                       href={l.href}
-                      className="text-white/40 text-sm hover:text-white transition-colors"
+                      className="text-white/70 text-sm font-medium hover:text-white transition-colors"
                     >
                       {l.label}
                     </Link>
@@ -94,10 +92,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/25 text-xs">
+          <p className="text-white/40 text-xs">
             © {new Date().getFullYear()} Sport Solutions México. Todos los derechos reservados.
           </p>
-          <p className="text-white/20 text-xs">
+          <p className="text-white/40 text-xs">
             contacto@sportsolutions.com.mx
           </p>
         </div>
