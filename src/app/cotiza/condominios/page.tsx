@@ -437,7 +437,7 @@ export default function CondominiosPage() {
                 <AnimateIn key={step.number} delay={i * 0.1} direction="none">
                   <div className="bg-white p-10 flex flex-col gap-6 h-full hover:bg-gray-50 transition-colors duration-300">
                     <div className="flex items-start justify-between">
-                      <span className="text-6xl font-black text-black/8 leading-none tracking-tighter select-none">
+                      <span className="text-7xl font-black text-gray-200 leading-none tracking-tighter select-none">
                         {step.number}
                       </span>
                       <div className="w-11 h-11 bg-[#CC1C1C]/10 border border-[#CC1C1C]/20 flex items-center justify-center shrink-0">
@@ -445,10 +445,10 @@ export default function CondominiosPage() {
                       </div>
                     </div>
                     <div className="flex flex-col gap-2">
-                      <h3 className="text-black font-bold text-base leading-snug">
+                      <h3 className="text-gray-900 font-bold text-xl leading-snug">
                         {step.title}
                       </h3>
-                      <p className="text-black/40 text-sm leading-relaxed">
+                      <p className="text-gray-500 text-sm leading-relaxed">
                         {step.description}
                       </p>
                     </div>
