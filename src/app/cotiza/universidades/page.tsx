@@ -414,26 +414,6 @@ export default function UniversidadesPage() {
           </div>
         </div>
       </section>
-
-      {/* ── 7. STATS ─────────────────────────────────────────────────────── */}
-      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-100 border border-gray-100">
-            {stats.map((s, i) => (
-              <AnimateIn key={s.label} delay={i * 0.08} direction="none">
-                <div className="p-10 lg:p-14 flex flex-col gap-3">
-                  <div className="text-7xl lg:text-8xl font-black text-black leading-none tracking-tighter">
-                    {s.value}
-                  </div>
-                  <div className="text-black/45 text-sm leading-snug">
-                    {s.label}
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

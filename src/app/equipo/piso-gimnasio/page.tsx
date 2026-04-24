@@ -343,24 +343,6 @@ export default function PisoGimnasioPage() {
           className="w-full h-full object-cover object-center"
         />
       </div>
-
-      {/* ── 7. STATS ─────────────────────────────────────────────────────── */}
-      <section className="bg-white py-28 lg:py-36 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-100 border border-gray-100">
-            {stats.map((s, i) => (
-              <AnimateIn key={s.label} delay={i * 0.08} className="p-12 lg:p-14">
-                <div className="text-5xl lg:text-6xl font-black text-black leading-none tracking-tighter mb-4">
-                  {s.value}
-                </div>
-                <div className="text-black/55 text-sm leading-relaxed">
-                  {s.label}
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
