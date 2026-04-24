@@ -59,33 +59,33 @@ export default function ContactCTA({
           {/* Left */}
           <div>
             <AnimateIn>
-              <p className="text-black/40 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+              <p className="text-gray-500 text-xs font-semibold uppercase tracking-widest mb-4">
                 Contacto
               </p>
               <h2 className="text-4xl lg:text-6xl font-black text-black leading-tight tracking-tight mb-5">
                 {title}
               </h2>
-              <p className="text-black/50 text-base font-light leading-relaxed max-w-sm mb-10">
+              <p className="text-gray-600 text-base leading-relaxed max-w-sm mb-10">
                 {subtitle}
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.1}>
               <div className="flex flex-col gap-4 text-sm">
-                <a href="mailto:contacto@sportsolutions.com.mx" className="text-black/50 hover:text-black transition-colors">
+                <a href="mailto:contacto@sportsolutions.com.mx" className="text-gray-800 font-medium hover:text-black transition-colors">
                   contacto@sportsolutions.com.mx
                 </a>
-                <a href="tel:+525500000000" className="text-black/50 hover:text-black transition-colors">
+                <a href="tel:+525500000000" className="text-gray-800 font-medium hover:text-black transition-colors">
                   +52 55 0000 0000
                 </a>
-                <span className="text-black/30">Ciudad de México, México</span>
+                <span className="text-gray-800 font-medium">Ciudad de México, México</span>
               </div>
             </AnimateIn>
           </div>
 
           {/* Right: form */}
           <AnimateIn direction="left" delay={0.15}>
-            <div className="bg-gray-50 border border-gray-200 p-10 lg:p-14">
+            <div className="bg-gray-50 border border-gray-200 shadow-sm p-10 lg:p-14">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
                   <div className="w-12 h-12 bg-[#CC1C1C] flex items-center justify-center mb-2">
@@ -106,14 +106,14 @@ export default function ContactCTA({
                   <Field label="Teléfono" type="tel" value={form.phone} onChange={set("phone")} placeholder="+52 55 0000 0000" />
 
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-black/40 text-[10px] font-semibold uppercase tracking-[0.18em]">
+                    <label className="text-gray-700 text-xs font-semibold uppercase tracking-wider">
                       Tipo de proyecto
                     </label>
                     <select
                       required
                       value={form.project}
                       onChange={set("project")}
-                      className="bg-white border border-gray-200 px-5 py-4 text-black text-sm focus:outline-none focus:border-gray-400 transition-colors appearance-none"
+                      className="bg-white border border-gray-300 px-5 py-4 text-gray-900 text-sm focus:outline-none focus:border-gray-400 transition-colors appearance-none"
                     >
                       <option value="" disabled className="bg-white text-black/40">Selecciona una opción</option>
                       {projectTypes.map((t) => (
@@ -123,7 +123,7 @@ export default function ContactCTA({
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-black/40 text-[10px] font-semibold uppercase tracking-[0.18em]">
+                    <label className="text-gray-700 text-xs font-semibold uppercase tracking-wider">
                       Mensaje
                     </label>
                     <textarea
@@ -131,7 +131,7 @@ export default function ContactCTA({
                       value={form.message}
                       onChange={set("message")}
                       placeholder="Tamaño del espacio, número de equipos, fecha estimada..."
-                      className="bg-white border border-gray-200 px-5 py-4 text-black text-sm placeholder:text-black/25 focus:outline-none focus:border-gray-400 transition-colors resize-none"
+                      className="bg-white border border-gray-300 px-5 py-4 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-gray-400 transition-colors resize-none"
                     />
                   </div>
 
@@ -168,7 +168,7 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-black/40 text-[10px] font-semibold uppercase tracking-[0.18em]">
+      <label className="text-gray-700 text-xs font-semibold uppercase tracking-wider">
         {label}
       </label>
       <input
@@ -177,7 +177,7 @@ function Field({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="bg-white border border-gray-200 px-5 py-4 text-black text-sm placeholder:text-black/25 focus:outline-none focus:border-gray-400 transition-colors"
+        className="bg-white border border-gray-300 px-5 py-4 text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:border-gray-400 transition-colors"
       />
     </div>
   );
