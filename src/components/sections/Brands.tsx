@@ -31,13 +31,15 @@ function BrandItem({ brand }: { brand: Brand }) {
     <div className="flex items-center gap-12 px-16 py-10 border-r border-black/8 group cursor-default">
       <div className="flex flex-col items-center gap-2">
         {brand.logoSrc && !logoFailed ? (
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img
-            src={brand.logoSrc}
-            alt={brand.name}
-            onError={() => setLogoFailed(true)}
-            className="h-8 object-contain invert opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-          />
+          <div className="bg-gray-50 border border-gray-100 p-6 flex items-center justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={brand.logoSrc}
+              alt={brand.name}
+              onError={() => setLogoFailed(true)}
+              className="h-8 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
         ) : (
           <span className="text-black/70 font-black text-4xl tracking-tight group-hover:text-black transition-colors duration-300">
             {brand.name}
