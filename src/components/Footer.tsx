@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
 
 const cols = [
   {
@@ -35,9 +36,10 @@ const cols = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn",  href: "#" },
-  { label: "Facebook",  href: "#" },
+  { icon: Linkedin,  href: "https://www.linkedin.com/company/sportsolutionsmexico/?originalSubdomain=mx", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/sport_solutions/", label: "Instagram" },
+  { icon: Youtube,   href: "https://www.youtube.com/channel/UC-mz1P_sH8kWqgQzsFOMndw", label: "YouTube" },
+  { icon: Facebook,  href: "https://www.facebook.com/sportsolutionsmx/", label: "Facebook" },
 ];
 
 export default function Footer() {
@@ -56,16 +58,22 @@ export default function Footer() {
               Diseñamos, equipamos e instalamos espacios fitness profesionales
               en toda la República Mexicana.
             </p>
-            <div className="flex gap-5">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  className="text-white/50 text-xs hover:text-white transition-colors uppercase tracking-widest"
-                >
-                  {s.label}
-                </a>
-              ))}
+            <div className="flex gap-4">
+              {socials.map((s) => {
+                const Icon = s.icon;
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="text-white/50 hover:text-white transition-colors duration-150"
+                  >
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
