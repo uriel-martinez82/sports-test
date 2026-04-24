@@ -346,7 +346,7 @@ export default function DesarrollosInmobiliariosPage() {
                 <AnimateIn key={step.number} delay={i * 0.1} direction="none">
                   <div className="bg-white border border-gray-100 shadow-md p-10 lg:p-14 flex flex-col gap-6 h-full hover:bg-gray-50 hover:shadow-lg transition-shadow duration-200">
                     <div className="flex items-start justify-between">
-                      <span className="text-7xl font-black text-gray-200 leading-none tracking-tighter select-none">
+                      <span className="text-7xl font-black text-black leading-none tracking-tighter select-none">
                         {step.number}
                       </span>
                       <div className="w-11 h-11 bg-[#CC1C1C]/10 border border-[#CC1C1C]/20 flex items-center justify-center shrink-0">
