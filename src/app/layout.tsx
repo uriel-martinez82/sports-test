@@ -3,6 +3,7 @@ import { Geist, Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -45,10 +46,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${geist.variable} ${barlow.variable} ${barlowCondensed.variable} h-full`}>
+      <head>
+        <Script
+          id="gtm-head"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGLSSV4');`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#0a0a0a] text-white antialiased">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MGLSSV4"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Script
+          id="zoho-crm-tracking"
+          src="https://crm.zoho.com/crm/javascript/zcga.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
