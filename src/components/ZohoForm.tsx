@@ -6,14 +6,15 @@ interface ZohoFormProps {
   height?: string;
 }
 
-export default function ZohoForm({ src, label = "Zoho Form", height = "804px" }: ZohoFormProps) {
+export default function ZohoForm({ src, label = "Zoho Form", height = "900px" }: ZohoFormProps) {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <iframe
         aria-label={label}
         frameBorder="0"
         style={{
-          height,
+          minHeight: height,
+          height: "auto",
           width: "100%",
           border: "none",
           transition: "all 0.5s ease",
