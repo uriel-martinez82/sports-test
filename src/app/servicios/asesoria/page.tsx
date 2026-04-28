@@ -2,7 +2,7 @@
 
 import { Search, LayoutGrid, Tag, GraduationCap } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import ContactCTA from "@/components/sections/ContactCTA";
+import ZohoForm from "@/components/ZohoForm";
 
 const HERO = "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Stages011-1024x768.jpg";
 const FALLBACK = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
@@ -118,7 +118,14 @@ export default function AsesoriaPage() {
       </section>
 
       {/* ── CONTACT ──────────────────────────────────────────────────────────── */}
-      <ContactCTA title="Agenda tu asesoría sin costo" />
+      <section id="contacto" className="bg-white py-16 lg:py-24 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ZohoForm
+            src="https://forms.zohopublic.com/SportSolutions2025/form/FormularioGeneral/formperma/HUZg-O-8C31vPjux7xvDXNp4XjgVvP-bLTjq6Acu-O4"
+            label="Formulario General"
+          />
+        </div>
+      </section>
     </>
   );
 }

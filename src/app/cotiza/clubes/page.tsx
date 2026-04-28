@@ -147,7 +147,10 @@ export default function ClubesPage() {
       {/* ── 2. FORMULARIO ────────────────────────────────────────────────── */}
       <section id="contacto" className="bg-white py-16 lg:py-24 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ZohoForm />
+          <ZohoForm
+            src="https://forms.zohopublic.com/SportSolutions2025/form/FormAperturadeGimnasio2026/formperma/3VhUe6B-EpUYVbc7WXrhqmjEaW-bzgjY6RGiWD6QUH0"
+            label="Form Apertura de Gimnasio 2026"
+          />
         </div>
       </section>
 

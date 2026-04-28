@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Phone, MessageCircle, Mail, ArrowRight } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import ContactCTA from "@/components/sections/ContactCTA";
+import ZohoForm from "@/components/ZohoForm";
 
 // ── Hero slideshow ─────────────────────────────────────────────────────────────
 
@@ -181,10 +181,14 @@ export default function ContactoPage() {
       </section>
 
       {/* ── FORM SECTION ───────────────────────────────────────────────────────── */}
-      <ContactCTA
-        title="Solicita asesoría personalizada"
-        subtitle="Es un placer poder saber más de tu proyecto."
-      />
+      <section id="contacto" className="bg-white py-16 lg:py-24 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ZohoForm
+            src="https://forms.zohopublic.com/SportSolutions2025/form/FormularioGeneral/formperma/HUZg-O-8C31vPjux7xvDXNp4XjgVvP-bLTjq6Acu-O4"
+            label="Formulario General"
+          />
+        </div>
+      </section>
     </>
   );
 }
