@@ -123,6 +123,7 @@ export default function AsesoriaPage() {
           <ZohoForm
             src="https://forms.zohopublic.com/SportSolutions2025/form/FormularioGeneral/formperma/HUZg-O-8C31vPjux7xvDXNp4XjgVvP-bLTjq6Acu-O4"
             label="Formulario General"
+            height="804px"
           />
         </div>
       </section>

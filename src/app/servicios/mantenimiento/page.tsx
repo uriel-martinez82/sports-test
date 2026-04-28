@@ -2,7 +2,7 @@
 
 import { Clock, Settings, Wrench, Package } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import ContactCTA from "@/components/sections/ContactCTA";
+import ZohoForm from "@/components/ZohoForm";
 
 const HERO = "https://sportsolutions.com.mx/wp-content/uploads/2023/07/MAINTENANCE_LOGAN_3882-1-1024x683.jpg";
 const FALLBACK = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
@@ -123,7 +123,15 @@ export default function MantenimientoPage() {
       </section>
 
       {/* ── CONTACT ──────────────────────────────────────────────────────────── */}
-      <ContactCTA title="Agenda tu servicio técnico" />
+      <section id="contacto" className="bg-white py-16 lg:py-24 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ZohoForm
+            src="https://forms.zohopublic.com/SportSolutions2025/form/FormularioMantenimiento/formperma/EsMhzkhEkYUWzRwv6ok0ZvjbyLgBVg-D4YhdTfml-Gw"
+            label="Formulario Mantenimiento"
+            height="804px"
+          />
+        </div>
+      </section>
     </>
   );
 }

@@ -150,6 +150,7 @@ export default function ClubesPage() {
           <ZohoForm
             src="https://forms.zohopublic.com/SportSolutions2025/form/FormAperturadeGimnasio2026/formperma/3VhUe6B-EpUYVbc7WXrhqmjEaW-bzgjY6RGiWD6QUH0"
             label="Form Apertura de Gimnasio 2026"
+            height="863px"
           />
         </div>
       </section>

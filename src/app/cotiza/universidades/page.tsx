@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import ContactCTA from "@/components/sections/ContactCTA";
+import ZohoForm from "@/components/ZohoForm";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -146,10 +146,15 @@ export default function UniversidadesPage() {
       </section>
 
       {/* ── 2. FORMULARIO ────────────────────────────────────────────────── */}
-      <ContactCTA
-        title="Cotiza el gimnasio de tu universidad"
-        subtitle="Muy pronto un asesor comercial se pondrá en contacto contigo."
-      />
+      <section id="contacto" className="bg-white py-16 lg:py-24 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ZohoForm
+            src="https://forms.zohopublic.com/SportSolutions2025/form/ColegiosyUniversidades/formperma/VAQQvmcKVxEOWCYf0FEn-sVnfnTvweG2ys0_ToOp1UE"
+            label="Colegios y Universidades"
+            height="892px"
+          />
+        </div>
+      </section>
 
       {/* ── 3. POR QUÉ UN GIMNASIO EN TU UNIVERSIDAD ────────────────────── */}
       <section className="bg-white py-28 lg:py-36 overflow-hidden">
