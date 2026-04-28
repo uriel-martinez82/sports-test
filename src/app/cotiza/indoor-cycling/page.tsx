@@ -393,8 +393,14 @@ export default function IndoorCyclingPage() {
       </section>
 
       {/* ── 6. FORMULARIO ────────────────────────────────────────────────── */}
-      <section id="contacto" className="bg-white py-16 lg:py-24 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section id="contacto" className="bg-[#1a1a1a] py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-6 text-center mb-10">
+          <h2 className="font-condensed font-black text-4xl lg:text-5xl uppercase text-white">
+            Solicita asesoría personalizada
+          </h2>
+          <p className="text-white/60 text-base mt-3">Haz tu consulta ahora mismo y nos pondremos en contacto contigo para brindarte el mejor asesoramiento para el éxito de tu estudio de indoor cycling.</p>
+        </div>
+        <div className="max-w-4xl mx-auto px-6">
           <ZohoForm
             src="https://forms.zohopublic.com/SportSolutions2025/form/FormIndoorCyclingWebGENERALduplicadosanti1/formperma/vY-hSplFoTb8uEGwrQfsGzgskOoykRJ72K_VBH271v0"
             label="Form Indoor Cycling"
