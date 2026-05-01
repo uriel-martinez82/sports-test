@@ -27,7 +27,7 @@ const packages = [
       "Zona cardio básica + equipos de fuerza esenciales. Ideal para oficinas corporativas y startups.",
     items: ["2 caminadoras", "1 elíptica", "1 bicicleta", "Mancuernas y accesorios"],
     badge: "Desde $5,000 MXN/mes",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Paquetes-04-1024x768.jpg",
+    image: "/images/casos/paquetes-04.jpg",
     fallback: "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
     accent: false,
   },
@@ -38,7 +38,7 @@ const packages = [
       "Zona cardio completa + fuerza + funcional. Para empresas que quieren ofrecer una experiencia premium.",
     items: ["4-6 caminadoras", "Elípticas", "Bicicletas Stages", "Multigym · Área funcional"],
     badge: "Cotización personalizada",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Paquetes-01-1024x768.jpg",
+    image: "/images/casos/paquetes-01.jpg",
     fallback: FALLBACK_GYM,
     accent: true,
   },
@@ -49,7 +49,7 @@ const packages = [
       "Gimnasio corporativo completo con zonas diferenciadas, estudio de clases grupales y tecnología Freemotion iFit®.",
     items: ["Cardio premium Freemotion", "Fuerza Genesis", "Indoor Cycling Stages", "Clases grupales"],
     badge: "Proyecto a medida",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Stages03-1024x768.jpg",
+    image: "/images/casos/stages-03.jpg",
     fallback: FALLBACK_GYM,
     accent: false,
   },
@@ -94,7 +94,7 @@ export default function EmpresasPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2020/12/Paquetes-01-1024x768.jpg"
+          src="/images/casos/paquetes-01.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -213,7 +213,7 @@ export default function EmpresasPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2020/12/Stages03-1024x768.jpg"
+                  src="/images/casos/stages-03.jpg"
                   alt="Gimnasio corporativo equipado por Sport Solutions"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK_GYM; }}

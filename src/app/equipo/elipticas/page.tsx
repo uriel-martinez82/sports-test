@@ -25,7 +25,7 @@ const models = [
       "Elíptica comercial de uso rudo con zancada ajustable. Resistencia magnética, pantalla LCD y programas de entrenamiento integrados.",
     specs: ["Zancada 50cm", "20 niveles de resistencia", "Peso máx 150kg"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/elipticas-unofit-x9201-01-367x367.jpg",
+      "/images/productos/eliptica-unofit-x9201.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -40,7 +40,7 @@ const models = [
       "Estructura acero",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/elipticas-unofit-impulse-re-500-sport-slutions-367x367.jpg",
+      "/images/productos/eliptica-unofit-re500.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -51,7 +51,7 @@ const models = [
       "Combina el movimiento de elíptica con escaladora para un entrenamiento de cuerpo completo. Quema hasta 2.5x más calorías que una elíptica convencional.",
     specs: ["Movimiento combinado", "Alta intensidad", "Bajo impacto"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/ESCALADORA-MAX-TRAINER-367x367.jpg",
+      "/images/productos/escaladora-max-trainer.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -62,7 +62,7 @@ const models = [
       "Elíptica premium con conectividad iFit® y pantalla táctil. Zancada guiada que se adapta al movimiento natural del usuario para máxima comodidad.",
     specs: ["iFit® incluido", "Pantalla táctil", "Zancada adaptativa"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/pro3700c_4_600x-367x367.jpg",
+      "/images/productos/pro3700c.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -77,7 +77,7 @@ const models = [
       "Garantía extendida",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/elipticas-unofit-x9201-sport-slutions-mar19-1-367x367.jpg",
+      "/images/general/eliptica-unofit-x9201-2.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -92,7 +92,7 @@ const models = [
       "Ideal hoteles y empresas",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/elipticas-unofit-impulse-re-500-sport-slutions-mar19-4-367x367.jpg",
+      "/images/general/eliptica-unofit-re500-2.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -141,7 +141,7 @@ export default function ElipticasPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2021/12/elipticasssss.jpg"
+          src="/images/productos/elipticas.jpg"
           alt=""
           aria-hidden="true"
           onError={(e) => {
@@ -247,7 +247,7 @@ export default function ElipticasPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2020/12/elipticas-unofit-x9201-sport-slutions-mar19-1-367x367.jpg"
+                  src="/images/general/eliptica-unofit-x9201-2.jpg"
                   alt="Elíptica Unofit en uso comercial"
                   onError={(e) => {
                     e.currentTarget.src =

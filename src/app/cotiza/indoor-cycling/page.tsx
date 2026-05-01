@@ -23,14 +23,14 @@ const models = [
     tag: "Rhythm & Boutique",
     description:
       "Designed for the world's most popular rhythm classes. The RhythmBar™ accommodates all rhythm hand positions, SprintShift enables instant resistance changes, and CarbonGlyde delivers the smoothest ride available for boutique studios.",
-    image: "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/SC_Indoor_Series_Sc2_820_by_615.jpg",
+    image: "/images/productos/stages-sc2.jpg",
   },
   {
     name: "Stages SC3",
     tag: "Más completo",
     description:
       "The global leader in premium indoor cycling. Features CarbonGlyde, magnetic braking, FitLoc, SprintShift, and the Stages Power meter — the most accurate direct power meter on the market, used by elite pro cycling teams worldwide.",
-    image: "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/Stages_Sc_Series_SC3_820_by_615.jpg",
+    image: "/images/productos/stages-sc3.jpg",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function IndoorCyclingPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/stages_eqx_scbikes_700x450.jpg"
+          src="/images/productos/stages-eqx.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -154,7 +154,7 @@ export default function IndoorCyclingPage() {
                 <div className="mb-6">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg"
+                    src="/images/marcas/stages-logo.svg"
                     alt="Stages Cycling"
                     className="h-7 w-auto"
                     style={{ filter: "brightness(0)" }}
@@ -213,7 +213,7 @@ export default function IndoorCyclingPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/SC_Indoor_Series_Range_820_by_615.jpg"
+                  src="/images/productos/stages-sc-range.jpg"
                   alt="Gama completa de bicicletas Stages SC Series"
                   className="w-full h-full object-cover object-center"
                 />
@@ -266,7 +266,7 @@ export default function IndoorCyclingPage() {
                     <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm px-3 py-2">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src="https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg"
+                        src="/images/marcas/stages-logo.svg"
                         alt="Stages Cycling"
                         className="h-4 w-auto"
                         style={{ filter: "brightness(0) invert(1)" }}

@@ -4,7 +4,7 @@ import { Search, LayoutGrid, Tag, GraduationCap } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import ZohoForm from "@/components/ZohoForm";
 
-const HERO = "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Stages011-1024x768.jpg";
+const HERO = "/images/casos/stages-011.jpg";
 const FALLBACK = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
 
 const steps = [

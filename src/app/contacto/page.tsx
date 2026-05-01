@@ -9,8 +9,8 @@ import ZohoForm from "@/components/ZohoForm";
 // ── Hero slideshow ─────────────────────────────────────────────────────────────
 
 const SLIDES = [
-  "https://sportsolutions.com.mx/wp-content/uploads/2022/05/t22.9_FM_7575-scaled-e1653427427542.jpg",
-  "https://sportsolutions.com.mx/wp-content/uploads/2022/05/ACTIVE-Studio-006.jpeg",
+  "/images/hero/t22-fm-7575-1.jpg",
+  "/images/hero/active-studio-006.jpg",
 ];
 
 function HeroSlideshow() {
@@ -166,7 +166,7 @@ export default function ContactoPage() {
         className="relative flex items-center justify-center overflow-hidden"
         style={{
           height: "300px",
-          backgroundImage: "url('https://sportsolutions.com.mx/wp-content/uploads/2020/11/about-us-parallax-1.jpg')",
+          backgroundImage: "url('/images/contacto/about-us-parallax.jpg')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",

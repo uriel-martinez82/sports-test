@@ -4,7 +4,7 @@ import { Clock, Settings, Wrench, Package } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import ZohoForm from "@/components/ZohoForm";
 
-const HERO = "https://sportsolutions.com.mx/wp-content/uploads/2023/07/MAINTENANCE_LOGAN_3882-1-1024x683.jpg";
+const HERO = "/images/mantenimiento/maintenance-1.jpg";
 const FALLBACK = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
 
 const services = [

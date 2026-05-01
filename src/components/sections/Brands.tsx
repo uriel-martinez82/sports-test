@@ -16,7 +16,7 @@ const brands: Brand[] = [
     name: "Stages",
     category: "Indoor Cycling",
     logoSrc:
-      "https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg",
+      "/images/marcas/stages-logo.svg",
   },
   { id: "freemotion", name: "FREEMOTION.", category: "Cardio & Fuerza" },
   { id: "unofit",     name: "UNOFIT",      category: "Equipamiento" },

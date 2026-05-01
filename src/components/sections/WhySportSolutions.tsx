@@ -7,7 +7,7 @@ const sections = [
     imageRight: true,
     dark: false,
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Cotiza-tu-proyecto.jpg",
+      "/images/hero/cotiza-tu-proyecto.jpg",
     title: "No solo vendemos equipos",
     subtitle: "Creamos el gimnasio perfecto para tu espacio",
     body: "Asesoría, diseño de layout, instalación certificada y soporte continuo en los 32 estados de México.",
@@ -19,7 +19,7 @@ const sections = [
     imageRight: false,
     dark: false,
     image:
-      "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/stages_eqx_scbikes_700x450.jpg",
+      "/images/productos/stages-eqx.jpg",
     title: "Las mejores marcas del mundo",
     subtitle: "Distribuidores exclusivos de Stages y Freemotion en México",
     body: "La tecnología que usan los mejores estudios y clubes del mundo, ahora disponible para tu proyecto.",
@@ -31,7 +31,7 @@ const sections = [
     imageRight: true,
     dark: false,
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2023/07/MAINTENANCE_LOGAN_3882-1.jpg",
+      "/images/mantenimiento/maintenance-2.jpg",
     title: "Soporte que no te abandona",
     subtitle: "Garantías directas. Técnicos certificados.",
     body: "Refacciones originales, mantenimiento preventivo y asistencia técnica en todo el país.",

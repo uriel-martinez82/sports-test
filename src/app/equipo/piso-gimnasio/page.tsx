@@ -25,7 +25,7 @@ const models = [
       "La línea de entrada de Pavigym. Superficie de caucho reciclado de alta densidad, ideal para zonas de cardio, peso libre y áreas de estiramiento. Disponible en rollos y losetas intercambiables.",
     specs: ["Caucho reciclado", "Rollos y losetas", "Múltiples colores"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2023/01/pavigym-endurance-3-1024x685.jpg",
+      "/images/piso/pavigym-endurance.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -36,7 +36,7 @@ const models = [
       "Superficie de alto rendimiento para zonas de entrenamiento funcional y CrossFit. Mayor absorción de impacto, resistencia a caída de pesas y acabado antideslizante de máxima durabilidad.",
     specs: ["Alta absorción", "Resistente a pesas", "Antideslizante"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2023/01/piso-para-gimnasio-pavigym-performance-10-1024x682.jpg",
+      "/images/piso/pavigym-performance.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -51,7 +51,7 @@ const models = [
       "Máxima resistencia",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2023/01/piso-para-gimnasio-pavigym-extreme-15-1024x684.jpg",
+      "/images/piso/pavigym-extreme.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -100,7 +100,7 @@ export default function PisoGimnasioPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2023/01/piso-para-gimnasio-pavigym-6.jpg"
+          src="/images/piso/pavigym-6.jpg"
           alt=""
           aria-hidden="true"
           onError={(e) => {
@@ -218,7 +218,7 @@ export default function PisoGimnasioPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2023/01/piso-para-gimnasio-pavigym-12-1024x768.jpg"
+                  src="/images/piso/pavigym-12.jpg"
                   alt="Piso Pavigym instalado en gimnasio profesional"
                   onError={(e) => {
                     e.currentTarget.src =
@@ -345,7 +345,7 @@ export default function PisoGimnasioPage() {
       <div className="w-full overflow-hidden" style={{ height: "500px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2020/11/Back01-SportSolutions.jpg"
+          src="/images/hero/back01-sport-solutions.jpg"
           alt="Sport Solutions — instalación de piso Pavigym"
           onError={(e) => {
             e.currentTarget.src =

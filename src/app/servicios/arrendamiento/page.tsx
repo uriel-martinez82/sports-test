@@ -4,7 +4,7 @@ import { Building2, Dumbbell, GraduationCap, Hotel, TreePine, Users } from "luci
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import ZohoForm from "@/components/ZohoForm";
 
-const HERO = "https://sportsolutions.com.mx/wp-content/uploads/2022/07/t22.9_FM_7575-scaled.jpg?id=8306";
+const HERO = "/images/hero/t22-fm-7575-2.jpg";
 const FALLBACK = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
 
 const audience = [
@@ -155,7 +155,7 @@ export default function ArrendamientoPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2022/08/Cotiza-tu-proyecto.jpg"
+                  src="/images/hero/cotiza-tu-proyecto.jpg"
                   alt="Área fitness arrendada"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK; }}

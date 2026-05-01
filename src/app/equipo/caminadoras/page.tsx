@@ -25,7 +25,7 @@ const models = [
       "Caminadora comercial de uso rudo con motor de alta potencia. Pantalla LCD, inclinación automática y velocidad hasta 20 km/h. Ideal para gimnasios de alto tráfico.",
     specs: ["Motor 3.5 HP", "Velocidad 0.8-20 km/h", "Inclinación 0-15%"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2021/10/Caminadora-Unofit-x8600-1-367x367.png",
+      "/images/productos/caminadora-unofit-x8600.png",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -36,7 +36,7 @@ const models = [
       "Sistema de amortiguamiento REFLEX que reduce el impacto tibial hasta 52%. Pantalla táctil, conectividad iFit® con más de 16,000 entrenamientos en todo el mundo.",
     specs: ["Motor 4.0 HP", "iFit® incluido", "Inclinación -3% a 15%"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/freemotion-t109b-reflex-m1-367x367.png",
+      "/images/productos/freemotion-t109b.png",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -51,7 +51,7 @@ const models = [
       "Garantía estructura 7 años",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/caminadora-x8400-unofit-g1-1-367x367.jpg",
+      "/images/productos/caminadora-x8400-unofit.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -62,7 +62,7 @@ const models = [
       "El modelo más completo de Unofit. Motor de alta potencia, pantalla táctil, inclinación y velocidad premium para los usuarios más exigentes.",
     specs: ["Motor 4.0 HP", "Velocidad hasta 22 km/h", "Pantalla táctil"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Unofit-x8900-367x367.jpg",
+      "/images/productos/unofit-x8900.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -73,7 +73,7 @@ const models = [
       "Caminadora sin motor de superficie curva. Propulsada por el usuario, sin consumo eléctrico. Ideal para zonas de entrenamiento funcional de alta intensidad.",
     specs: ["Sin motor", "Superficie curva", "Uso intensivo"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/caminadora-sin-motor-unofit-g1-367x367.png",
+      "/images/productos/caminadora-sin-motor-unofit.png",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -84,7 +84,7 @@ const models = [
       "Inclinación extrema de hasta 40% para entrenamientos de alta intensidad. Quema hasta 5 veces más calorías que una caminadora convencional.",
     specs: ["Inclinación hasta 40%", "Alta intensidad", "Bajo impacto"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Incline-trainer-367x367.jpg",
+      "/images/productos/incline-trainer.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
@@ -133,7 +133,7 @@ export default function CaminadorasPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2021/01/SS0101.jpg"
+          src="/images/general/ss0101.jpg"
           alt=""
           aria-hidden="true"
           onError={(e) => {
@@ -240,7 +240,7 @@ export default function CaminadorasPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2022/05/t22.9_FM_7575-scaled-e1653427427542.jpg"
+                  src="/images/hero/t22-fm-7575-1.jpg"
                   alt="Caminadora Freemotion en uso comercial"
                   onError={(e) => {
                     e.currentTarget.src =

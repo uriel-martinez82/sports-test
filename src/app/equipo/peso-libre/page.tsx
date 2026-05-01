@@ -29,7 +29,7 @@ const models = [
       "Racks de almacenamiento",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2021/01/Unofit-equipos-peso-libre.jpg",
+      "/images/productos/unofit-peso-libre.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -40,7 +40,7 @@ const models = [
       "La línea de fuerza más completa de TRUE Fitness. Jaulas de potencia, racks olímpicos y estaciones de peso libre con acabados de acero inoxidable y pintura electrostática de alta durabilidad.",
     specs: ["Jaulas olímpicas", "Racks de potencia", "Acero reforzado"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2021/01/Composite-Strength-TRUE-Fitness.jpg",
+      "/images/productos/composite-strength-true.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -55,7 +55,7 @@ const models = [
       "Garantía directa",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Paquetes-03.jpg",
+      "/images/casos/paquetes-03.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -103,7 +103,7 @@ export default function PesoLibrePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2020/12/Paquetes-03.jpg"
+          src="/images/casos/paquetes-03.jpg"
           alt=""
           aria-hidden="true"
           onError={(e) => {

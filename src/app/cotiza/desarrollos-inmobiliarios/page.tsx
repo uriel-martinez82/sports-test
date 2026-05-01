@@ -26,7 +26,7 @@ const products = [
     description:
       "La caminadora con el sistema de amortiguamiento más avanzado del mercado. Reduce el impacto tibial hasta 52%. Pantalla táctil 22\", conectividad iFit® con más de 16,000 entrenamientos.",
     badge: "Premium",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2022/05/t22.9_FM_7575-scaled-e1653427427542.jpg",
+    image: "/images/hero/t22-fm-7575-1.jpg",
     fallback: "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
   {
@@ -34,7 +34,7 @@ const products = [
     description:
       "La bicicleta elegida por los mejores estudios boutique del mundo. RythmBar™, SprintShift™, CarbonGlyde™. Garantía 10 años en estructura.",
     badge: "Distribuidor exclusivo",
-    image: "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/SC_Indoor_Series_Sc2_820_by_615.jpg",
+    image: "/images/productos/stages-sc2.jpg",
     fallback: FALLBACK_GYM,
   },
 ];
@@ -95,7 +95,7 @@ function BrandBanner() {
             <div className="flex justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://sportsolutions.com.mx/wp-content/uploads/2023/09/StagesFreemotion.png"
+                src="/images/marcas/stages-freemotion.png"
                 alt="Stages Cycling y Freemotion — Distribuidores exclusivos en México"
                 className="max-h-24 w-auto object-contain"
                 style={{ filter: "brightness(0)" }}
@@ -108,7 +108,7 @@ function BrandBanner() {
               <div className="flex flex-col items-center gap-3">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://stagescycling.com/static/version1761039453/frontend/Stages/default/en_US/images/logo.svg"
+                  src="/images/marcas/stages-logo.svg"
                   alt="Stages Cycling"
                   className="h-8 w-auto"
                   style={{ filter: "brightness(0)" }}
@@ -139,7 +139,7 @@ export default function DesarrollosInmobiliariosPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-04-at-20.07.45.jpeg"
+          src="/images/contacto/whatsapp-image.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -258,7 +258,7 @@ export default function DesarrollosInmobiliariosPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2022/08/Desarrollos-inmobiliarios-Sport-Solutions.jpg"
+                  src="/images/segmentos/desarrollos-inmobiliarios.jpg"
                   alt="Gimnasio en desarrollo inmobiliario equipado por Sport Solutions"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK_GYM; }}

@@ -3,7 +3,7 @@
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import ContactCTA from "@/components/sections/ContactCTA";
 
-const HERO = "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Stages0015-1024x768.jpg";
+const HERO = "/images/casos/stages-0015.jpg";
 const FALLBACK = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80";
 
 export default function CasosDeExitoPage() {
@@ -44,7 +44,7 @@ export default function CasosDeExitoPage() {
               <div className="mb-8">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2020/11/StagesCycling.png"
+                  src="/images/marcas/stages-logo.png"
                   alt="Stages Cycling"
                   className="h-10 w-auto object-contain"
                   onError={(e) => { e.currentTarget.style.display = "none"; }}
@@ -68,7 +68,7 @@ export default function CasosDeExitoPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2020/12/Stages011-1024x768.jpg"
+                  src="/images/casos/stages-011.jpg"
                   alt="Stages Indoor Cycling"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK; }}
@@ -89,7 +89,7 @@ export default function CasosDeExitoPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2020/12/Gimnasio001-1024x768.jpg"
+                  src="/images/casos/gimnasio-001.jpg"
                   alt="Octane Fitness"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK; }}
@@ -102,7 +102,7 @@ export default function CasosDeExitoPage() {
               <div className="mb-8">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2020/11/Octane-logo-Sport-Solutions.png"
+                  src="/images/marcas/octane-logo.png"
                   alt="Octane Fitness"
                   className="h-10 w-auto object-contain"
                   onError={(e) => { e.currentTarget.style.display = "none"; }}

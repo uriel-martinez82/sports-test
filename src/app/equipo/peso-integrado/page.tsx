@@ -25,7 +25,7 @@ const models = [
       "La línea de peso integrado más completa de Unofit. Estaciones individuales y multigym para todas las zonas musculares. Estructura de acero de alta resistencia con tapicería comercial antidesgarro.",
     specs: ["Estaciones individuales", "Multigym", "Tapicería comercial"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/unofit_linea_elite-367x367.jpg",
+      "/images/productos/unofit-linea-elite.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -36,7 +36,7 @@ const models = [
       "La línea de fuerza más avanzada de Freemotion. Cable Dual independiente que permite movimientos funcionales en 3D, replicando los patrones naturales del cuerpo para mayor efectividad y menor riesgo de lesión.",
     specs: ["Cable Dual independiente", "Movimiento 3D", "Uso profesional"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Fremotion-002-367x367.jpg",
+      "/images/productos/freemotion-002b.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -47,7 +47,7 @@ const models = [
       "Línea de peso integrado con diseño elegante y operación silenciosa. Ideal para gimnasios corporativos, hoteles y condominios de lujo que buscan acabados premium sin sacrificar rendimiento.",
     specs: ["Operación silenciosa", "Diseño premium", "Uso corporativo"],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/002-367x367.jpg",
+      "/images/productos/freemotion-002.jpg",
     fallback:
       "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
@@ -96,7 +96,7 @@ export default function PesoIntegradoPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2020/12/Paquetes-03.jpg"
+          src="/images/casos/paquetes-03.jpg"
           alt=""
           aria-hidden="true"
           onError={(e) => {

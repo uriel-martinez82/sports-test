@@ -65,7 +65,7 @@ const solutions: Solution[] = [
       { item: "Paquete básico completo",     price: "desde $5,000/mes" },
     ],
     terms: "Contrato a 36 meses · 3 mantenimientos preventivos anuales incluidos",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Cotiza-tu-proyecto.jpg",
+    image: "/images/hero/cotiza-tu-proyecto.jpg",
     cta: "Cotizar arrendamiento",
     accent: true,
   },
@@ -77,21 +77,21 @@ const products = [
     description:
       "Uso profesional, estructura robusta para alto tráfico. Garantía 7 años en estructura, 3 en motor.",
     price: "Desde $3,999 MXN/mes",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2020/12/caminadora-x8400-unofit-g1-e1616518527384.jpg",
+    image: "/images/general/caminadora-x8400-unofit-2.jpg",
   },
   {
     name: "Equipo Multigym",
     description:
       "Equipo de peso integrado de uso rudo, ideal para espacios reducidos con alta demanda.",
     price: "Desde $2,999 MXN/mes",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2021/03/IF2060-Chica.png",
+    image: "/images/productos/if2060.png",
   },
   {
     name: "Bicicleta Indoor Unofit Pro+",
     description:
       "Construida para clases de spinning y uso intensivo diario. Ideal para sala de bicicletas.",
     price: "Desde $2,399 MXN/mes (x3 unidades)",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2021/03/bicicleta-para-indoor-cycling-bs001-unofit-m1.jpg",
+    image: "/images/productos/bicicleta-bs001-unofit.jpg",
   },
 ];
 
@@ -142,7 +142,7 @@ export default function CondominiosPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2022/08/Condominios-y-torres-de-departamentos-Sport-Solutions.jpg"
+          src="/images/segmentos/condominios.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -260,7 +260,7 @@ export default function CondominiosPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2022/08/Arrendamiento-Sport.jpg"
+                  src="/images/segmentos/arrendamiento.jpg"
                   alt="Gimnasio en condominio equipado por Sport Solutions"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK_IMG; }}

@@ -92,7 +92,7 @@ export default function UniversidadesPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2025/09/Copia-de-12102024-IMG_5300-scaled.jpg"
+          src="/images/hero/hero-img-5300.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -212,7 +212,7 @@ export default function UniversidadesPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2025/09/6.jpg"
+                  src="/images/hero/hero-6.jpg"
                   alt="Gimnasio universitario equipado por Sport Solutions"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK_GYM; }}
@@ -241,7 +241,7 @@ export default function UniversidadesPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2023/10/Activacion-wellness-sport-solutions.webp"
+                  src="/images/general/activacion-wellness.webp"
                   alt="Activación wellness Sport Solutions"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80"; }}
@@ -407,7 +407,7 @@ export default function UniversidadesPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2023/07/MAINTENANCE_LOGAN_3882-1.jpg"
+                  src="/images/mantenimiento/maintenance-2.jpg"
                   alt="Técnico certificado de Sport Solutions realizando mantenimiento"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => { e.currentTarget.src = FALLBACK_GYM; }}

@@ -29,7 +29,7 @@ const models = [
       "Ajuste 4D de sillín y manubrio",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/SC2-STAGES-1024x1024.jpg",
+      "/images/productos/sc2-stages.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
   },
@@ -45,7 +45,7 @@ const models = [
       "Peso máximo usuario: 136 kg",
     ],
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/SC3-STAGES-1024x1024.jpg",
+      "/images/productos/sc3-stages.jpg",
     fallback:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
   },
@@ -94,7 +94,7 @@ export default function BicicletasDeSpinningPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2022/09/Stages-event-back04.jpg"
+          src="/images/hero/stages-event-back.jpg"
           alt=""
           aria-hidden="true"
           onError={(e) => {
@@ -211,7 +211,7 @@ export default function BicicletasDeSpinningPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://sportsolutions.com.mx/wp-content/uploads/2021/01/Estudios-01.jpg"
+                  src="/images/segmentos/estudios-indoor.jpg"
                   alt="Estudio equipado con Stages Cycling"
                   onError={(e) => {
                     e.currentTarget.src =

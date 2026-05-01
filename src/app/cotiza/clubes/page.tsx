@@ -33,7 +33,7 @@ const products = [
     badge: "Freemotion · Stages",
     description:
       "Caminadoras Freemotion REFLEX, elípticas y bicicletas Stages. La tecnología iFit® con más de 16,000 entrenamientos interactivos grabados alrededor del mundo.",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2022/05/t22.9_FM_7575-scaled-e1653427427542.jpg",
+    image: "/images/hero/t22-fm-7575-1.jpg",
     fallback: "https://images.unsplash.com/photo-1571019614099-56d12ae14a76?w=800&q=80",
   },
   {
@@ -41,7 +41,7 @@ const products = [
     badge: "Freemotion Genesis",
     description:
       "Equipos de peso integrado y libre Freemotion Genesis, Epic y Dual Cable Cross. La línea más completa para entrenamientos de fuerza de alto rendimiento.",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2022/03/Freemotion-back-01.jpg",
+    image: "/images/general/freemotion-back.jpg",
     fallback: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
   {
@@ -49,7 +49,7 @@ const products = [
     badge: "Unofit · Pavigym",
     description:
       "Equipos Unofit para entrenamiento funcional, piso Pavigym resistente y accesorios. Diseñamos el concepto completo según el perfil de tus socios.",
-    image: "https://sportsolutions.com.mx/wp-content/uploads/2021/03/IF2060-Chica.png",
+    image: "/images/productos/if2060.png",
     fallback: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
 ];
@@ -91,7 +91,7 @@ export default function ClubesPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://sportsolutions.com.mx/wp-content/uploads/2022/03/Freemotion-back-01.jpg"
+          src="/images/general/freemotion-back.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"

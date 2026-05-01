@@ -9,42 +9,42 @@ const segments = [
     id: "indoor-cycling",
     title: "Indoor Cycling",
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Estudios-Indoor-Cycling-Stages.jpg",
+      "/images/segmentos/indoor-cycling-stages.jpg",
     href: "/cotiza/indoor-cycling",
   },
   {
     id: "condominios",
     title: "Condominios",
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Condominios-y-torres-de-departamentos-Sport-Solutions.jpg",
+      "/images/segmentos/condominios.jpg",
     href: "/cotiza/condominios",
   },
   {
     id: "desarrollos",
     title: "Desarrollos Inmobiliarios",
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Desarrollos-inmobiliarios-Sport-Solutions.jpg",
+      "/images/segmentos/desarrollos-inmobiliarios.jpg",
     href: "/cotiza/desarrollos-inmobiliarios",
   },
   {
     id: "clubes",
     title: "Clubes Deportivos",
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2022/08/Estudios-Hiit-Sport-Solutions.jpg",
+      "/images/segmentos/estudios-hiit.jpg",
     href: "/cotiza/clubes",
   },
   {
     id: "empresas",
     title: "Empresas",
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2020/12/Paquetes-01-1024x768.jpg",
+      "/images/casos/paquetes-01.jpg",
     href: "/cotiza/empresas",
   },
   {
     id: "universidades",
     title: "Universidades",
     image:
-      "https://sportsolutions.com.mx/wp-content/uploads/2025/09/Copia-de-12102024-IMG_5300-scaled.jpg",
+      "/images/hero/hero-img-5300.jpg",
     href: "/cotiza/universidades",
   },
 ];
