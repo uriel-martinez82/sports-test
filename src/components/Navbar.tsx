@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 
 const cotizaItems = [
+  { label: "Apertura de gimnasios",     href: "/cotiza/apertura-gimnasios" },
+  { label: "Hoteles & Resorts",         href: "/cotiza/hoteles" },
   { label: "Estudios Indoor Cycling",   href: "/cotiza/indoor-cycling" },
   { label: "Condominios",               href: "/cotiza/condominios" },
   { label: "Desarrollos Inmobiliarios", href: "/cotiza/desarrollos-inmobiliarios" },
