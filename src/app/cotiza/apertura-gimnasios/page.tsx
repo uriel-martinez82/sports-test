@@ -33,7 +33,7 @@ const brands = [
   },
   {
     name: "FREEMOTION",
-    logo: "/landings/apertura_gimnasios/Freemotion-logo-ss.png",
+    logo: "/landings/apertura_gimnasios/Freemotion-logo.jpg",
     logoBg: "bg-white",
     bullets: [
       "Más de 400 patentes activas",
