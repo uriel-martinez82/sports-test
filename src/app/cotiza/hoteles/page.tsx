@@ -11,7 +11,7 @@ export default function HotelesPage() {
       <section className="relative min-h-screen flex items-center pt-[108px]">
         <div className="absolute inset-0">
           <Image
-            src="/landings/hoteles_resorts/Soluciones-para-Hoteles-Resorts.jpg"
+            src="/landings/hoteles_resorts/cala_de_mar_ixtapa_expertoenhoteles6-Grande.jpg"
             alt="Soluciones para Hoteles y Resorts"
             fill
             className="object-cover object-center"
@@ -94,7 +94,7 @@ export default function HotelesPage() {
           <AnimateIn>
             <div className="relative w-full overflow-hidden mb-10" style={{ aspectRatio: "16/7" }}>
               <Image
-                src="/landings/hoteles_resorts/cala_de_mar_ixtapa_expertoenhoteles6-Grande.jpg"
+                src="/landings/hoteles_resorts/Soluciones-para-Hoteles-Resorts.jpg"
                 alt="Cala de Mar Ixtapa — caso de éxito Sport Solutions"
                 fill
                 className="object-cover object-center"
