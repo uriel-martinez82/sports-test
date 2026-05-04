@@ -33,7 +33,7 @@ const serviciosItems = [
 ];
 
 const navLinks = [
-  { label: "Blog",     href: "#blog" },
+  { label: "Blog",     href: "/blog" },
   { label: "Contacto", href: "/contacto" },
 ];
 
