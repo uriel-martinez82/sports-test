@@ -1,6 +1,5 @@
 import { getPosts, getCategories, getTotalPages } from '@/lib/wordpress';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 function stripHtml(html: string) {
@@ -188,7 +187,6 @@ export default async function BlogPage({
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }
