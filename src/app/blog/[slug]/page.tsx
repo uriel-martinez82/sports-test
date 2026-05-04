@@ -32,6 +32,15 @@ function stripHtml(html: string) {
   return html.replace(/<[^>]*>/g, '').replace(/\[.*?\]/g, '').trim();
 }
 
+function cleanWordPressContent(html: string): string {
+  return html
+    // Remove Visual Composer shortcodes like [vc_row], [vc_column], [/vc_row] etc
+    .replace(/\[\/?(vc_row|vc_column|vc_column_text|vc_row_inner|vc_column_inner|vc_section)[^\]]*\]/g, '')
+    // Remove any other square bracket shortcodes
+    .replace(/\[\/?[a-z_]+[^\]]*\]/g, '')
+    .trim();
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPost(slug);
@@ -100,7 +109,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               prose-img:rounded-none prose-img:w-full
               prose-ul:text-gray-700 prose-li:marker:text-[#E8420C]
               prose-strong:text-black"
-            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+            dangerouslySetInnerHTML={{ __html: cleanWordPressContent(post.content.rendered) }}
           />
 
           <div className="mt-12 pt-8 border-t border-gray-200">
