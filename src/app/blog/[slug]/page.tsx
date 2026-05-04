@@ -1,29 +1,25 @@
-import { getPost } from '@/lib/wordpress';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
+const WP_API = 'https://sportsolutions.com.mx/wp-json/wp/v2';
+
 export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await getPost(params.slug);
-  if (!post) return {};
-  return {
-    title: post.yoast_head_json?.title || post.title.rendered,
-    description: post.yoast_head_json?.description,
-    openGraph: {
-      images: post.yoast_head_json?.og_image?.[0]?.url
-        ? [post.yoast_head_json.og_image[0].url]
-        : [],
-    },
-  };
-}
-
-export async function generateStaticParams() {
-  return [];
+async function getPost(slug: string) {
+  try {
+    const res = await fetch(
+      `${WP_API}/posts?slug=${slug}&_fields=id,slug,title,content,excerpt,date,featured_image_src,categories,yoast_head_json`,
+      { cache: 'no-store' }
+    );
+    if (!res.ok) return null;
+    const posts = await res.json();
+    return posts[0] ?? null;
+  } catch {
+    return null;
+  }
 }
 
 function formatDate(dateStr: string) {
@@ -33,11 +29,25 @@ function formatDate(dateStr: string) {
 }
 
 function stripHtml(html: string) {
-  return html.replace(/<[^>]*>/g, '').trim();
+  return html.replace(/<[^>]*>/g, '').replace(/\[.*?\]/g, '').trim();
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPost(slug);
+  if (!post) return {};
+  return {
+    title: post.yoast_head_json?.title || stripHtml(post.title.rendered),
+    description: post.yoast_head_json?.description,
+    openGraph: {
+      images: post.yoast_head_json?.og_image?.[0]?.url ? [post.yoast_head_json.og_image[0].url] : [],
+    },
+  };
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPost(slug);
   if (!post) notFound();
 
   const heroImage = post.featured_image_src?.landsacpe?.[0] ||
@@ -47,7 +57,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     <>
       <Navbar />
 
-      {/* HERO */}
       {heroImage && (
         <section className="relative h-[400px]" style={{ paddingTop: '108px' }}>
           <div
@@ -69,21 +78,20 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         </section>
       )}
 
-      {/* CONTENT */}
+      {!heroImage && (
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-[140px] pb-8">
+          <Link href="/blog" className="text-[#E8420C] text-sm hover:underline">
+            ← Volver al blog
+          </Link>
+          <h1 className="font-condensed font-black text-4xl uppercase text-black mt-4 leading-tight">
+            {stripHtml(post.title.rendered)}
+          </h1>
+          <p className="text-gray-400 text-sm mt-2">{formatDate(post.date)}</p>
+        </div>
+      )}
+
       <section className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          {!heroImage && (
-            <div className="mb-8">
-              <Link href="/blog" className="text-[#E8420C] text-sm hover:underline">
-                ← Volver al blog
-              </Link>
-              <h1 className="font-condensed font-black text-4xl uppercase text-black mt-4 leading-tight">
-                {stripHtml(post.title.rendered)}
-              </h1>
-              <p className="text-gray-400 text-sm mt-2">{formatDate(post.date)}</p>
-            </div>
-          )}
-
           <div
             className="prose prose-lg max-w-none
               prose-headings:font-black prose-headings:text-black prose-headings:uppercase
