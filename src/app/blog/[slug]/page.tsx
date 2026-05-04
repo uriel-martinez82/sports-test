@@ -1,9 +1,12 @@
-import { getPost, getPosts } from '@/lib/wordpress';
+import { getPost } from '@/lib/wordpress';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getPost(params.slug);
@@ -20,8 +23,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export async function generateStaticParams() {
-  const posts = await getPosts(1, 100);
-  return posts.map((p) => ({ slug: p.slug }));
+  return [];
 }
 
 function formatDate(dateStr: string) {
