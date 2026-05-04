@@ -4,7 +4,12 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 function stripHtml(html: string) {
-  return html.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...').replace(/&#8217;/g, "'").trim();
+  return html
+    .replace(/<[^>]*>/g, '')
+    .replace(/\[.*?\]/g, '')  // remove WP shortcodes
+    .replace(/&hellip;/g, '...')
+    .replace(/&#8217;/g, "'")
+    .trim();
 }
 
 function formatDate(dateStr: string) {
@@ -16,10 +21,11 @@ function formatDate(dateStr: string) {
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: { page?: string; category?: string };
+  searchParams: Promise<{ page?: string; category?: string }>;
 }) {
-  const currentPage = Number(searchParams.page ?? 1);
-  const categoryId = searchParams.category ? Number(searchParams.category) : undefined;
+  const params = await searchParams;
+  const currentPage = Number(params.page ?? 1);
+  const categoryId = params.category ? Number(params.category) : undefined;
 
   const [posts, categories, totalPages] = await Promise.all([
     getPosts(currentPage, 9, categoryId),
