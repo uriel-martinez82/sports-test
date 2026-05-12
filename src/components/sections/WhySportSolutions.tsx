@@ -19,7 +19,7 @@ const sections = [
     imageRight: false,
     dark: false,
     image:
-      "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/stages_eqx_scbikes_700x450.jpg",
+      "/stages-bikes.jpg",
     title: "Las mejores marcas del mundo",
     subtitle: "Distribuidores exclusivos de Stages y Freemotion en México",
     body: "La tecnología que usan los mejores estudios y clubes del mundo, ahora disponible para tu proyecto.",
