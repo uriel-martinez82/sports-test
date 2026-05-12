@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
+    <section className="relative overflow-hidden bg-black" style={{ height: '100vh' }}>
       {/* Background video */}
       <video
         src="/hero.mp4"
@@ -15,7 +15,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        style={{ height: '100%', width: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
       />
 
       {/* Subtle overlay */}
@@ -28,11 +28,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease, delay: 0.2 }}
-            className="text-8xl md:text-9xl font-black text-white leading-[0.88] tracking-tight mb-5"
+            className="font-condensed font-black text-8xl md:text-9xl uppercase text-white leading-[0.9] tracking-tight mb-5"
           >
-            Equipa tu
-            <br />
-            gimnasio
+            Equipamos a los mejores gimnasios de México
           </motion.h1>
 
           <motion.p
@@ -41,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.4 }}
             className="text-white/70 text-lg mb-8"
           >
-            Distribuidores exclusivos. México.
+            Distribuidores exclusivos de las marcas líderes en fitness comercial. Diseño, instalación y servicio post-venta en todo el país.
           </motion.p>
 
           <motion.div
