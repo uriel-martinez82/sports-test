@@ -19,7 +19,7 @@ const sections = [
     imageRight: false,
     dark: false,
     image:
-      "/stages-bikes.jpg",
+      "/images/marcas/stages-bikes.jpg",
     title: "Las mejores marcas del mundo",
     subtitle: "Distribuidores exclusivos de Stages y Freemotion en México",
     body: "La tecnología que usan los mejores estudios y clubes del mundo, ahora disponible para tu proyecto.",
