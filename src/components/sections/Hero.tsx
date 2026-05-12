@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: '100vh', marginTop: 0, paddingTop: 0, overflow: 'hidden' }}>
+    <section className="relative w-full" style={{ height: '100vh', marginTop: 0, paddingTop: 0, overflow: 'hidden' }}>
       {/* Background video */}
       <video
         src="/hero.mp4"
