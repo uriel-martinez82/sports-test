@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: '100dvh' }}>
+    <section className="relative w-full overflow-hidden" style={{ height: '100svh', marginTop: 0, paddingTop: 0 }}>
       {/* Background video */}
       <video
         src="/hero.mp4"
@@ -15,7 +15,17 @@ export default function Hero() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          minWidth: '100%',
+          minHeight: '100%',
+          width: 'auto',
+          height: 'auto',
+          objectFit: 'cover',
+        }}
       />
 
       {/* Subtle overlay */}
