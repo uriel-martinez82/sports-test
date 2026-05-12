@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-black text-white antialiased">
+      <body className="min-h-full flex flex-col bg-white text-white antialiased overflow-hidden">
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MGLSSV4"
