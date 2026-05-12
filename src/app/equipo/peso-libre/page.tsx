@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Check, Compass, ListChecks, Truck, Wrench } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import ContactCTA from "@/components/sections/ContactCTA";
+import ZohoForm from "@/components/ZohoForm";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -160,10 +160,19 @@ export default function PesoLibrePage() {
       </section>
 
       {/* ── 2. FORMULARIO ────────────────────────────────────────────────── */}
-      <ContactCTA
-        title="Cotiza tu zona de peso libre"
-        subtitle="Muy pronto un asesor comercial se pondrá en contacto contigo."
-      />
+      <section id="contacto" className="bg-[#1a1a1a] py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-6 text-center mb-10">
+          <h2 className="font-condensed font-black text-4xl lg:text-5xl uppercase text-white">Cotiza tu zona de peso libre</h2>
+          <p className="text-white/60 text-base mt-3">Un asesor comercial se pondrá en contacto contigo a la brevedad.</p>
+        </div>
+        <div className="max-w-4xl mx-auto px-6">
+          <ZohoForm
+            src="https://forms.zohopublic.com/SportSolutions2025/form/FormIndoorCyclingWebSC3duplicadosanti/formperma/R9ltGr4fBPhZ5iNSR5dzqSDuBLj2t7hRWdHU-uB5yNQ"
+            label="Form Indoor Cycling SC3"
+            height="962px"
+          />
+        </div>
+      </section>
 
       {/* ── 3. INTRO ─────────────────────────────────────────────────────── */}
       <section className="bg-white py-28 lg:py-36 overflow-hidden">
