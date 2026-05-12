@@ -40,7 +40,8 @@ export default function Hero() {
             transition={{ duration: 0.9, ease, delay: 0.2 }}
             className="font-condensed font-bold text-5xl md:text-6xl lg:text-7xl uppercase text-white leading-[0.9] tracking-tight mb-5"
           >
-            Equipamos a los mejores gimnasios de México
+            <span className="block">Equipamos a los mejores</span>
+            <span className="block">Gimnasios de México</span>
           </motion.h1>
 
           <motion.p
