@@ -19,7 +19,7 @@ const sections = [
     imageRight: false,
     dark: false,
     image:
-      "/images/productos/stages-eqx.jpg",
+      "https://stagescycling.com/media/.renditions/wysiwyg/stages-cycling/category-pages/sc-series/stages_eqx_scbikes_700x450.jpg",
     title: "Las mejores marcas del mundo",
     subtitle: "Distribuidores exclusivos de Stages y Freemotion en México",
     body: "La tecnología que usan los mejores estudios y clubes del mundo, ahora disponible para tu proyecto.",
@@ -57,6 +57,7 @@ export default function WhySportSolutions() {
                 src={s.image}
                 alt={s.title}
                 className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=1200&q=80'; }}
               />
             </div>
 
