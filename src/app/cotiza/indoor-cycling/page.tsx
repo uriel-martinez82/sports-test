@@ -23,14 +23,14 @@ const models = [
     tag: "Rhythm & Boutique",
     description:
       "Designed for the world's most popular rhythm classes. The RhythmBar™ accommodates all rhythm hand positions, SprintShift enables instant resistance changes, and CarbonGlyde delivers the smoothest ride available for boutique studios.",
-    image: "/images/productos/stages-sc2.jpg",
+    image: "/images/productos/sc2-stages.jpg",
   },
   {
     name: "Stages SC3",
     tag: "Más completo",
     description:
       "The global leader in premium indoor cycling. Features CarbonGlyde, magnetic braking, FitLoc, SprintShift, and the Stages Power meter — the most accurate direct power meter on the market, used by elite pro cycling teams worldwide.",
-    image: "/images/productos/stages-sc3.jpg",
+    image: "/images/productos/sc3-stages.jpg",
   },
 ];
 
@@ -213,7 +213,7 @@ export default function IndoorCyclingPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/productos/stages-sc-range.jpg"
+                  src="/images/productos/stages-range.jpg"
                   alt="Gama completa de bicicletas Stages SC Series"
                   className="w-full h-full object-cover object-center"
                 />
