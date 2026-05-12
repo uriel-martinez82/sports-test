@@ -38,7 +38,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease, delay: 0.2 }}
-            className="font-condensed font-bold text-6xl md:text-7xl lg:text-8xl uppercase text-white leading-[0.9] tracking-tight mb-5"
+            className="font-condensed font-bold text-5xl md:text-6xl lg:text-7xl uppercase text-white leading-[0.9] tracking-tight mb-5"
           >
             Equipamos a los mejores gimnasios de México
           </motion.h1>
@@ -49,7 +49,7 @@ export default function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.4 }}
             className="text-white/70 text-lg mb-8"
           >
-            Distribuidores exclusivos de las marcas líderes en fitness comercial. Diseño, instalación y servicio post-venta en todo el país.
+            Distribuidores exclusivos de las marcas líderes en fitness comercial.<br />Diseño, instalación y servicio post-venta en todo el país.
           </motion.p>
 
           <motion.div
